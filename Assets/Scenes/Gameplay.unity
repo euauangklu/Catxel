@@ -526,6 +526,7 @@ RectTransform:
   m_Children:
   - {fileID: 576955338}
   - {fileID: 480967136}
+  - {fileID: 1586441026}
   m_Father: {fileID: 314775746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -612,6 +613,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1586441025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586441026}
+  m_Layer: 5
+  m_Name: CatPlayObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1586441026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586441025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 686276638}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 511.84473, y: -256.91}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 5.6184473, y: -0.50361824}
 --- !u!1 &1636102939
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +707,8 @@ MonoBehaviour:
   - rid: 7020319550385160521
   - rid: 7020319550385160522
   - rid: 7020319550385160927
+  - rid: 7020319562650878157
+  - rid: 7020319562650878185
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -724,6 +762,22 @@ MonoBehaviour:
           m_Value1: 6681500041778396716
         Name: SleepTime
         m_Value: 5
+    - rid: 7020319562650878157
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12146958205645799491
+          m_Value1: 2530104177919303424
+        Name: PlayTime
+        m_Value: 2
+    - rid: 7020319562650878185
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5176993383842852397
+          m_Value1: 12778695698612589404
+        Name: PlayGameobject
+        m_Value: {fileID: 1586441025}
 --- !u!114 &1636102942
 MonoBehaviour:
   m_ObjectHideFlags: 0

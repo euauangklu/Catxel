@@ -95,6 +95,8 @@ public partial class AreaWalkAction : Action
         CurrentScale.x *= -1;
         Agent.Value.transform.localScale = CurrentScale;
         FacingRight = !FacingRight;
+        
+        Debug.Log("Flip");
     }
 }
 

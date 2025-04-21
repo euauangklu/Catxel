@@ -10,8 +10,6 @@ public partial class SleepAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Agent;
     
-    [SerializeReference] public BlackboardVariable<float> WalkSpeed;
-    
     [SerializeReference] public BlackboardVariable<float> SleepTime = new BlackboardVariable<float>(1.0f);
     
     [SerializeReference] public BlackboardVariable<string> AnimatorSleepParam = new BlackboardVariable<string>("Sleep");

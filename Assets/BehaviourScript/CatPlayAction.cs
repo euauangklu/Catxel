@@ -31,7 +31,14 @@ public partial class CatPlayAction : Action
     protected override Status OnStart()
     {
         CurrentScale = Agent.Value.transform.localScale;
-        Agent.Value.transform.localScale = new Vector2(1, 1);
+        if (Agent.Value.transform.position.x < Object.Value.transform.position.x) //TurnRight
+        {
+            Agent.Value.transform.localScale = new Vector2(1, 1);
+        }
+        else if (Agent.Value.transform.position.x > Object.Value.transform.position.x) //TurnLeft
+        {
+            Agent.Value.transform.localScale = new Vector2(-1, 1);
+        }
         Animator = Agent.Value.GetComponentInChildren<Animator>();
         PlayTimer = PlayTime.Value;
         return Status.Running;

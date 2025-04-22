@@ -6,7 +6,7 @@ using Unity.Properties;
 using Random = UnityEngine.Random;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "AreaWalk", story: "[Agent] walk in area", category: "Action", id: "d01e312d663ee9eb535d81240cea06bc")]
+[NodeDescription(name: "CatAreaWalk", story: "[Agent] walk in area", category: "Action", id: "d01e312d663ee9eb535d81240cea06bc")]
 public partial class AreaWalkAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Agent;
@@ -95,8 +95,6 @@ public partial class AreaWalkAction : Action
         CurrentScale.x *= -1;
         Agent.Value.transform.localScale = CurrentScale;
         FacingRight = !FacingRight;
-        
-        Debug.Log("Flip");
     }
 }
 

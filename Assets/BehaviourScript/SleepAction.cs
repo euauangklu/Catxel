@@ -5,7 +5,7 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "Sleep", story: "[Agent] Sleep", category: "Action", id: "8cb1e684f2ad5fb9f1a2b3fc929bff6c")]
+[NodeDescription(name: "CatSleep", story: "[Agent] Sleep", category: "Action", id: "8cb1e684f2ad5fb9f1a2b3fc929bff6c")]
 public partial class SleepAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Agent;

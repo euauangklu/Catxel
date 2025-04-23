@@ -44,7 +44,7 @@ public partial class AreaWalkAction : Action
 
     protected override Status OnUpdate()
     {
-        Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, targetPosition, WalkSpeed * 100f * Time.deltaTime);
+        Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, targetPosition, WalkSpeed * 0.48f * Time.deltaTime);
         if (Vector2.Distance(Agent.Value.transform.position, targetPosition) < 0.1f)
         {
             Waiting = true;

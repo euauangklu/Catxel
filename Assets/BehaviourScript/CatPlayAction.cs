@@ -49,7 +49,7 @@ public partial class CatPlayAction : Action
         Animator.SetFloat(AnimatorSpeedParam,1);
         if (Vector2.Distance(Agent.Value.transform.position, Object.Value.transform.position) > StopDistance)
         {
-            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,Object.Value.transform.position,WalkSpeed * 100f * Time.deltaTime);
+            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,Object.Value.transform.position,WalkSpeed * 0.48f * Time.deltaTime);
         }
         if (Vector2.Distance(Agent.Value.transform.position, Object.Value.transform.position) <= StopDistance)
         {

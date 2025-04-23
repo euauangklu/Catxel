@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 09ba18d89f41e6047a94554b71b5f25a
+guid: 4eff57c6b1477ad40823f182ccf8ab5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1515050503397288625
-    second: 05A_0
+      213: 337586884497188582
+    second: BG_Testing_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 05A_0
+      name: BG_Testing_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 810
-        height: 810
+        width: 3600
+        height: 3600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1baa5cfd76a860510800000000000000
-      internalID: 1515050503397288625
+      spriteID: 6e6294b9b795fa400800000000000000
+      internalID: 337586884497188582
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      05A_0: 1515050503397288625
+      BG_Testing_0: 337586884497188582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

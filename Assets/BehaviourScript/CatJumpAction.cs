@@ -56,7 +56,7 @@ public partial class CatJumpAction : Action
                 Agent.Value.transform.localScale = new Vector2(-1, 1);
             }
             Animator.SetFloat(AnimatorSpeedParam,1);
-            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, Start.Value.transform.position, WalkSpeed * 100f * Time.deltaTime);
+            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, Start.Value.transform.position, WalkSpeed * 0.48f * Time.deltaTime);
         }
         // Check if already at StartPoint
         if (Vector2.Distance(Agent.Value.transform.position, Start.Value.transform.position) < 0.1f)
@@ -68,7 +68,7 @@ public partial class CatJumpAction : Action
         // Start Jump to MidPoint
         if (JumpReady && !DoneSit)
         {
-            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,Mid.Value.transform.position,WalkSpeed * 300f * Time.deltaTime);
+            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,Mid.Value.transform.position,WalkSpeed * 1f * Time.deltaTime);
         }
         // Play Sit Animation
         if (Vector2.Distance(Agent.Value.transform.position, Mid.Value.transform.position) < 0.1f && !DoneSit)
@@ -91,7 +91,7 @@ public partial class CatJumpAction : Action
             {
                 Agent.Value.transform.localScale = new Vector2(-1, 1);
             }
-            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,End.Value.transform.position,WalkSpeed * 300f * Time.deltaTime);
+            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,End.Value.transform.position,WalkSpeed * 1f * Time.deltaTime);
             Animator.SetBool(AnimatorJumpParam,true);
         }
         // Check if already at EndPoint

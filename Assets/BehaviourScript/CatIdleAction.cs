@@ -9,6 +9,7 @@ using Unity.Properties;
 public partial class CatIdleAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Agent;
+    
     [SerializeReference] public BlackboardVariable<float> WaitTime = new BlackboardVariable<float>(1.0f);
     
     [SerializeReference] public BlackboardVariable<string> AnimatorSpeedParam = new BlackboardVariable<string>("SpeedMagnitude");

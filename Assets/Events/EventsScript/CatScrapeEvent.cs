@@ -1,24 +1,27 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Events/Cat Butt Event")]
-public class CatButtEvent : GameEvents
+[CreateAssetMenu(menuName = "Events/Cat Scrape Event")]
+public class CatScrapeEvent : GameEvents
 {
     [SerializeField] private GameObject _gameObject;
+    
+    private GameObject ScrapePoint;
     
     private RandomEventManager manager;
 
     public override void TriggerEvent(RandomEventManager mgr)
-    { 
-        GameObject obj = Instantiate(_gameObject, new Vector3(0, -1.5f, 0), Quaternion.identity);
-        CatButt cat = obj.GetComponent<CatButt>();
+    {
+        GameObject ScrapePoint = GameObject.FindWithTag("ScrapePoint");
+        GameObject obj = Instantiate(_gameObject,ScrapePoint.transform.position, Quaternion.identity);
+        CatScrape cat = obj.GetComponent<CatScrape>();
         if (cat != null)
         {
             cat.eventSource = this;
         }
-
+        
         manager = mgr;
     }
-
+    
     public void OnEventDone()
     {
         if (manager != null)
@@ -26,5 +29,4 @@ public class CatButtEvent : GameEvents
             manager.ResetRandomEvent();
         }
     }
-
 }

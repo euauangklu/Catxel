@@ -2,13 +2,22 @@ using UnityEngine;
 
 public class RandomEventManager : MonoBehaviour
 {
-    public GameEvents[] gameEvents;
+    [SerializeField] private GameObject Player;
     
     public bool EventRandom;
+    
+    public GameEvents[] gameEvents;
 
+    public float EventTimer;
+
+    private float Timer;
     void Update()
     {
-        if (!EventRandom && Input.GetKey(KeyCode.E))
+        if (Timer < EventTimer)
+        {
+            Timer += Time.deltaTime;
+        }
+        if (!EventRandom && Timer >= EventTimer)
         {
             TriggerRandomEvent();
         }
@@ -16,14 +25,16 @@ public class RandomEventManager : MonoBehaviour
     public void TriggerRandomEvent()
     {
         var e = gameEvents[Random.Range(0, gameEvents.Length)];
-        e.TriggerEvent();
+        e.TriggerEvent(this);
+        Player.SetActive(false);
         EventRandom = true;
-        Time.timeScale = 0;
     }
 
     public void ResetRandomEvent()
     {
-        
+        Player.SetActive(true);
+        EventRandom = false;
+        Timer = 0;
     }
     
 }

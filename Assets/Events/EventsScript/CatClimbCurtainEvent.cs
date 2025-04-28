@@ -1,24 +1,26 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Events/Cat Butt Event")]
-public class CatButtEvent : GameEvents
+[CreateAssetMenu(menuName = "Events/Cat Climb Curtain Event")]
+public class CatClimbCurtainEvent : GameEvents
 {
     [SerializeField] private GameObject _gameObject;
     
+    private GameObject ClimbPoint;
+    
     private RandomEventManager manager;
-
     public override void TriggerEvent(RandomEventManager mgr)
-    { 
-        GameObject obj = Instantiate(_gameObject, new Vector3(0, -1.5f, 0), Quaternion.identity);
-        CatButt cat = obj.GetComponent<CatButt>();
+    {
+        GameObject ClimbPoint = GameObject.FindWithTag("ClimbPoint");
+        GameObject obj = Instantiate(_gameObject,ClimbPoint.transform.position, Quaternion.identity);
+        CatClimbCurtain cat = obj.GetComponent<CatClimbCurtain>();
         if (cat != null)
         {
             cat.eventSource = this;
         }
-
+        
         manager = mgr;
     }
-
+    
     public void OnEventDone()
     {
         if (manager != null)
@@ -26,5 +28,4 @@ public class CatButtEvent : GameEvents
             manager.ResetRandomEvent();
         }
     }
-
 }

@@ -10,6 +10,8 @@ public class CatButt : MonoBehaviour
     private float touchTimeCount;
     private Vector3 originalPos;
     private bool isShaking = false;
+    public CatButtEvent eventSource;
+    private bool AnimationPlay;
     void Start()
     {
         originalPos = transform.position;
@@ -18,25 +20,42 @@ public class CatButt : MonoBehaviour
     {
         if (touchTimeCount >= TouchTime)
         {
-            Destroy(this.gameObject);
-            Time.timeScale = 1;
-        }
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
+            if (!AnimationPlay)
             {
-                Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
-                Collider2D col = Physics2D.OverlapPoint(touchPos);
-                if (col != null && col.gameObject == this.gameObject && !isShaking)
+                transform.position -= new Vector3(Time.unscaledDeltaTime, 0f, 0f);
+                if (transform.position.x <= - 2f)
                 {
-                    StartCoroutine(Shake(shakeDuration, shakeMagnitude)); 
-                    touchTimeCount++;
+                    AnimationPlay = true;
+                }
+            }
+            if (eventSource != null && AnimationPlay)
+            {
+                eventSource.OnEventDone();
+                Destroy(this.gameObject);
+                AnimationPlay = false;
+                touchTimeCount = 0;
+            }
+        }
+
+        if (touchTimeCount < TouchTime)
+        {
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+
+                if (touch.phase == TouchPhase.Began)
+                {
+                    Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+                    Collider2D col = Physics2D.OverlapPoint(touchPos);
+                    if (col != null && col.gameObject == this.gameObject && !isShaking)
+                    {
+                        StartCoroutine(Shake(shakeDuration, shakeMagnitude));
+                        touchTimeCount++;
+                    }
                 }
             }
         }
-        
+
     }
     private IEnumerator Shake(float duration, float magnitude)
     {
@@ -48,7 +67,7 @@ public class CatButt : MonoBehaviour
             Vector3 randomOffset = new Vector3(Random.Range(-1f, 1f) * magnitude, Random.Range(-1f, 1f) * magnitude, 0f);
 
             transform.position = originalPos + randomOffset;
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;;
 
             yield return null;
         }

@@ -26,7 +26,6 @@ public class RandomEventManager : MonoBehaviour
     {
         var e = gameEvents[Random.Range(0, gameEvents.Length)];
         e.TriggerEvent(this);
-        Player.SetActive(false);
         EventRandom = true;
     }
 

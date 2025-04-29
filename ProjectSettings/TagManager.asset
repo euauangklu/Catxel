@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - MainCat
   - ScrapePoint
   - ClimbPoint
+  - CatTrash
+  - TopLeftSpawnArea
+  - BottomRightSpawnArea
   layers:
   - Default
   - TransparentFX

@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466078865}
   m_Layer: 0
-  m_Name: CatTrashSpawnPoint
+  m_Name: CatTrashSpawnArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,6 +512,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 269744049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &507656174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507656175}
+  m_Layer: 0
+  m_Name: CatHidePoint
+  m_TagString: HidePoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &507656175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507656174}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.39999998, y: -0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1193248322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &594042969
 GameObject:
@@ -607,11 +638,8 @@ MonoBehaviour:
   Player: {fileID: 1775610328}
   EventRandom: 0
   gameEvents:
-  - {fileID: 11400000, guid: f36bf90bf7e632b479749095244cfd90, type: 2}
-  - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
-  - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
-  - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
-  EventTimer: 50
+  - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
+  EventTimer: 5
 --- !u!4 &1078040890
 Transform:
   m_ObjectHideFlags: 0
@@ -657,6 +685,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 20324171}
+  - {fileID: 507656175}
   - {fileID: 1688060302}
   - {fileID: 466078865}
   m_Father: {fileID: 1891691576}

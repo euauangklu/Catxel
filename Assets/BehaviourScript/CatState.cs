@@ -8,5 +8,6 @@ public enum CatState
 	Patrol,
 	Jump,
 	Sleep,
-	Play
+	Play,
+	Eat
 }

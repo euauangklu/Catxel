@@ -11,6 +11,7 @@ TagManager:
   - TopLeftSpawnArea
   - BottomRightSpawnArea
   - HidePoint
+  - CatFood
   layers:
   - Default
   - TransparentFX
@@ -50,6 +51,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ui
+    uniqueID: 1566251599
     locked: 0
   - name: Events
     uniqueID: 2299799911

@@ -19,6 +19,7 @@ public class CatClimbCurtain : MonoBehaviour
 
     void Update()
     {
+        var MainCat = MainCatManager.MainCat;
         if (!AlreadyDrop)
         {
             if (DragNDrop.isDragging)
@@ -50,6 +51,7 @@ public class CatClimbCurtain : MonoBehaviour
             {
                 AlreadyDrop = false;
                 AlreadyDrag = false;
+                MainCat.transform.position = this.transform.position;
                 eventSource.OnEventDone();
                 Destroy(this.gameObject);
             }

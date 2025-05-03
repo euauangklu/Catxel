@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2128666731666494089}
   - component: {fileID: 9093100329530773133}
   - component: {fileID: 4697517086743221331}
+  - component: {fileID: 6281052850101355322}
   m_Layer: 0
   m_Name: Cat
   m_TagString: MainCat
@@ -115,11 +116,20 @@ MonoBehaviour:
   - rid: 7020319573144240372
   - rid: 7020319573144240635
   - rid: 7020319619250127315
+  - rid: 376079205622350581
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
+    - rid: 376079205622350581
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4469628945184637835
+          m_Value1: 494263701521808058
+        Name: CatFood
+        m_Value: {fileID: 0}
     - rid: 7020319550385160410
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -238,3 +248,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6281052850101355322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4335895209060668166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd370c387106b345abd8cdc149ebc44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

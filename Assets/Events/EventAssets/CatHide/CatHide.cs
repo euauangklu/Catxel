@@ -18,6 +18,7 @@ public class CatHide : MonoBehaviour
     }
     void Update()
     {
+        var MainCat = MainCatManager.MainCat;
         if (!WalkOut)
         {
             if (Input.touchCount > 0)
@@ -60,6 +61,7 @@ public class CatHide : MonoBehaviour
             if (SetTime <= Timer)
             {
                 eventSource.OnEventDone();
+                MainCat.transform.position = this.transform.position;
                 Destroy(this.gameObject);
                 Siting = false;
                 WalkOut = false;

@@ -28,7 +28,6 @@ public class RandomEventManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Timer);
         if (Timer < EventTimer)
         {
             Timer += Time.deltaTime;

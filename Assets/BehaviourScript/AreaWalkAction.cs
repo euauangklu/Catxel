@@ -32,6 +32,10 @@ public partial class AreaWalkAction : Action
     private bool FacingRight;
     
     private Animator Animator;
+    
+    private DragNDrop dragNDrop;
+
+    private Rigidbody2D rb;
 
     protected override Status OnStart()
     {
@@ -39,13 +43,21 @@ public partial class AreaWalkAction : Action
         RecentPosition = Agent.Value.transform.position;
         WaitTimer = WaitTime.Value;
         Animator = Agent.Value.GetComponentInChildren<Animator>();
+        rb = Agent.Value.GetComponent<Rigidbody2D>();
+        dragNDrop = Agent.Value.GetComponent<DragNDrop>();
         return Status.Running;
     }
 
     protected override Status OnUpdate()
     {
+        if (dragNDrop != null && dragNDrop.isDragging)
+        {
+            Animator.SetFloat(AnimatorSpeedParam,0);
+            return Status.Success;
+        }
+        
         Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, targetPosition, WalkSpeed * 0.48f * Time.deltaTime);
-        if (Vector2.Distance(Agent.Value.transform.position, targetPosition) < 0.1f)
+        if (Vector2.Distance(Agent.Value.transform.position, targetPosition) < 0.001f)
         {
             Waiting = true;
         }

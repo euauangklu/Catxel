@@ -55,6 +55,9 @@ public class CatScrape : MonoBehaviour
                 AlreadyDrag = false;
                 MainCat.transform.position = this.transform.position;
                 eventSource.OnEventDone();
+                MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP += MainCatManager.MainCat.GetComponent<MainCatManager>().EXPPerEvent;
+                PlayerPrefs.SetInt("CatEXP", MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP);
+                PlayerPrefs.Save();
                 Destroy(this.gameObject);
             }
         }

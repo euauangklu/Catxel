@@ -31,6 +31,9 @@ public class CatButt : MonoBehaviour
             if (eventSource != null && AnimationPlay)
             {
                 eventSource.OnEventDone();
+                MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP += MainCatManager.MainCat.GetComponent<MainCatManager>().EXPPerEvent;
+                PlayerPrefs.SetInt("CatEXP", MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP);
+                PlayerPrefs.Save();
                 Destroy(this.gameObject);
                 AnimationPlay = false;
                 touchTimeCount = 0;

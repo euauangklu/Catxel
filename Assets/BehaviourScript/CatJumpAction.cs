@@ -34,8 +34,10 @@ public partial class CatJumpAction : Action
 
     private bool DoneSit;
     
+    private DragNDrop dragNDrop;
     protected override Status OnStart()
     {
+        dragNDrop = Agent.Value.GetComponent<DragNDrop>();
         CurrentScale = Agent.Value.transform.localScale;
         Animator = Agent.Value.GetComponentInChildren<Animator>();
         SitTimer = SitTime.Value;
@@ -44,6 +46,10 @@ public partial class CatJumpAction : Action
 
     protected override Status OnUpdate()
     {
+        if (dragNDrop != null && dragNDrop.isDragging)
+        {
+            return Status.Success;
+        }
         // Walk To StartPoint
         if (Vector2.Distance(Agent.Value.transform.position, Start.Value.transform.position) > 0.1f && !JumpReady)
         {

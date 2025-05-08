@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 5b10525b4e1ca964096c88fe139cc60d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5810810468398222667
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_0
+  - first:
+      213: -8598543089495830634
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_1
+  - first:
+      213: -1877512283518643081
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_2
+  - first:
+      213: -2004877683469483568
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_3
+  - first:
+      213: 8092706016099729665
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_4
+  - first:
+      213: 1354178850748572145
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_5
+  - first:
+      213: -4655820521237218255
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_6
+  - first:
+      213: -890538885532484739
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_7
+  - first:
+      213: -8986705763269799884
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_8
+  - first:
+      213: -1103544289500077654
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_9
+  - first:
+      213: -3605631079131398414
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_10
+  - first:
+      213: 1861765837455477117
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_11
+  - first:
+      213: -6723732278670287295
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_12
+  - first:
+      213: 5807865798279142049
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_13
+  - first:
+      213: 5605589216858764983
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_14
+  - first:
+      213: -7630617378631680551
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_15
+  - first:
+      213: 2480324692871469224
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_16
+  - first:
+      213: 7910512793158980205
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_17
+  - first:
+      213: 334623297798430637
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_18
+  - first:
+      213: -2006853197995440996
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_19
+  - first:
+      213: 6998762764595636130
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_20
+  - first:
+      213: -7478631201669090879
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_21
+  - first:
+      213: -4713281999421647021
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_22
+  - first:
+      213: 2993980782150113514
+    second: Cat_Sleeping_Sprite_Sheet_Transparent_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2b00e7aaadb5fa0800000000000000
+      internalID: -5810810468398222667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 432
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f06bcfd96dba880800000000000000
+      internalID: -8598543089495830634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774507f868cb1f5e0800000000000000
+      internalID: -1877512283518643081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 432
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d181b28e5e3d24e0800000000000000
+      internalID: -2004877683469483568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1018a41ae311f4070800000000000000
+      internalID: 8092706016099729665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 432
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f127317d720bc210800000000000000
+      internalID: 1354178850748572145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c7ead47e3336fb0800000000000000
+      internalID: -4655820521237218255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7bf9251a9b24a3f0800000000000000
+      internalID: -890538885532484739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430195fc8bec84380800000000000000
+      internalID: -8986705763269799884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1ef66c05c6fa0f0800000000000000
+      internalID: -1103544289500077654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2feb34113a936fdc0800000000000000
+      internalID: -3605631079131398414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 384
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79cd744a2256d910800000000000000
+      internalID: 1861765837455477117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e970dcd1180b2a0800000000000000
+      internalID: -6723732278670287295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa91911c2fa99050800000000000000
+      internalID: 5807865798279142049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b670ab61bd0bcd40800000000000000
+      internalID: 5605589216858764983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd7cb14ce99a1690800000000000000
+      internalID: -7630617378631680551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a8db36ba22eb6220800000000000000
+      internalID: 2480324692871469224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d629c634979c7cd60800000000000000
+      internalID: 7910512793158980205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf58decd12d4a400800000000000000
+      internalID: 334623297798430637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94002136a93624e0800000000000000
+      internalID: -2006853197995440996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a724f247a9902160800000000000000
+      internalID: 6998762764595636130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c17c5aab80963890800000000000000
+      internalID: -7478631201669090879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357da3a5efe079eb0800000000000000
+      internalID: -4713281999421647021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sleeping_Sprite_Sheet_Transparent_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8576898a1cc8920800000000000000
+      internalID: 2993980782150113514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e1bf61ca5588cd840ab577cb4f32b7b9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cat_Sleeping_Sprite_Sheet_Transparent_0: -5810810468398222667
+      Cat_Sleeping_Sprite_Sheet_Transparent_1: -8598543089495830634
+      Cat_Sleeping_Sprite_Sheet_Transparent_10: -3605631079131398414
+      Cat_Sleeping_Sprite_Sheet_Transparent_11: 1861765837455477117
+      Cat_Sleeping_Sprite_Sheet_Transparent_12: -6723732278670287295
+      Cat_Sleeping_Sprite_Sheet_Transparent_13: 5807865798279142049
+      Cat_Sleeping_Sprite_Sheet_Transparent_14: 5605589216858764983
+      Cat_Sleeping_Sprite_Sheet_Transparent_15: -7630617378631680551
+      Cat_Sleeping_Sprite_Sheet_Transparent_16: 2480324692871469224
+      Cat_Sleeping_Sprite_Sheet_Transparent_17: 7910512793158980205
+      Cat_Sleeping_Sprite_Sheet_Transparent_18: 334623297798430637
+      Cat_Sleeping_Sprite_Sheet_Transparent_19: -2006853197995440996
+      Cat_Sleeping_Sprite_Sheet_Transparent_2: -1877512283518643081
+      Cat_Sleeping_Sprite_Sheet_Transparent_20: 6998762764595636130
+      Cat_Sleeping_Sprite_Sheet_Transparent_21: -7478631201669090879
+      Cat_Sleeping_Sprite_Sheet_Transparent_22: -4713281999421647021
+      Cat_Sleeping_Sprite_Sheet_Transparent_23: 2993980782150113514
+      Cat_Sleeping_Sprite_Sheet_Transparent_3: -2004877683469483568
+      Cat_Sleeping_Sprite_Sheet_Transparent_4: 8092706016099729665
+      Cat_Sleeping_Sprite_Sheet_Transparent_5: 1354178850748572145
+      Cat_Sleeping_Sprite_Sheet_Transparent_6: -4655820521237218255
+      Cat_Sleeping_Sprite_Sheet_Transparent_7: -890538885532484739
+      Cat_Sleeping_Sprite_Sheet_Transparent_8: -8986705763269799884
+      Cat_Sleeping_Sprite_Sheet_Transparent_9: -1103544289500077654
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

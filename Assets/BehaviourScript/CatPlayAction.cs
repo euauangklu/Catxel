@@ -28,8 +28,11 @@ public partial class CatPlayAction : Action
 
     private Vector2 CurrentScale;
     
+    private DragNDrop dragNDrop;
+    
     protected override Status OnStart()
     {
+        dragNDrop = Agent.Value.GetComponent<DragNDrop>();
         CurrentScale = Agent.Value.transform.localScale;
         if (Agent.Value.transform.position.x < Object.Value.transform.position.x) //TurnRight
         {
@@ -46,6 +49,11 @@ public partial class CatPlayAction : Action
 
     protected override Status OnUpdate()
     {
+        if (dragNDrop != null && dragNDrop.isDragging)
+        {
+            Animator.SetBool(AnimatorCatPlayParam,false);
+            return Status.Success;
+        }
         Animator.SetFloat(AnimatorSpeedParam,1);
         if (Vector2.Distance(Agent.Value.transform.position, Object.Value.transform.position) > StopDistance)
         {

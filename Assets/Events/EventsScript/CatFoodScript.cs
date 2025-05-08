@@ -8,6 +8,7 @@ public class CatFoodScript : MonoBehaviour
     [SerializeField] private GameObject CatFoodIcon;
     [SerializeField] private GameObject CatFoodAnimationObj;
     public RandomEventManager RandomEventManager;
+    [SerializeField] private float SetHours;
     private bool PlayAnimation;
     private bool Done;
     private bool Shaking;
@@ -17,14 +18,24 @@ public class CatFoodScript : MonoBehaviour
     private bool StartCooldown;
     void Start()
     {
+        LoadSavedCatFood();
         LoadCatFoodByRealTime();
     }
     void OnApplicationQuit()
     {
         PlayerPrefs.SetString("LastPlayTime", DateTime.Now.ToBinary().ToString());
+        PlayerPrefs.SetInt("CatFoodNum", CatFoodNum);
         PlayerPrefs.Save();
     }
 
+    void LoadSavedCatFood()
+    {
+        if (PlayerPrefs.HasKey("CatFoodNum"))
+        {
+            CatFoodNum = PlayerPrefs.GetInt("CatFoodNum");
+        }
+    }
+    
     void LoadCatFoodByRealTime()
     {
         if (PlayerPrefs.HasKey("LastPlayTime"))
@@ -33,7 +44,7 @@ public class CatFoodScript : MonoBehaviour
             DateTime lastTime = DateTime.FromBinary(temp);
             TimeSpan timeAway = DateTime.Now - lastTime;
 
-            int unitsLost  = Mathf.FloorToInt((float)timeAway.TotalHours / 6);
+            int unitsLost  = Mathf.FloorToInt((float)timeAway.TotalHours / SetHours);
             CatFoodNum -= unitsLost ;
 
             if (CatFoodNum < 0)

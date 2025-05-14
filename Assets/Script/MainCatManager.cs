@@ -11,10 +11,12 @@ public class MainCatManager : MonoBehaviour
     private bool AlreadyDrag;
     public int CatEXP;
     public int EXPPerEvent = 10;
+    private SpriteRenderer cat;
 
     void Awake()
     {
         MainCat = gameObject;
+        cat = gameObject.GetComponent<SpriteRenderer>();
         Animator = gameObject.GetComponent<Animator>();
         if (PlayerPrefs.HasKey("CatEXP"))
         {
@@ -31,10 +33,11 @@ public class MainCatManager : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        if (CatEXP > 100)
+        if (CatEXP >= 100)
         {
-            gameObject.transform.localScale = new Vector3(2, 2, 2);
+            cat.color = Color.green;
         }
+        
         if (_dragNDrop.isDragging && !AlreadyDrag)
         {
             Animator.SetBool("Hold", true);

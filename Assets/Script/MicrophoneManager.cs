@@ -8,6 +8,10 @@ public class MicrophoneManager : MonoBehaviour
     private string device;
     private bool micInitialized;
     [SerializeField] private SpriteRenderer cat;
+    [SerializeField] private bool pressing;
+    private bool CatHear;
+    [SerializeField] private GameObject CommentBox;
+    private float timer;
 
     void Start()
     {
@@ -25,18 +29,32 @@ public class MicrophoneManager : MonoBehaviour
 
     void Update()
     {
-        if (!micInitialized) return;
-
-        float loudness = GetLoudnessFromMic();
-
-        if (loudness > loudnessThreshold)
+        if (pressing)
         {
-            Debug.Log("Sound: " + loudness);
-            cat.color = Color.red;
+            if (!micInitialized) return;
+            float loudness = GetLoudnessFromMic();
+            if (loudness > loudnessThreshold)
+            {
+                Debug.Log("Sound: " + loudness);
+                CatHear = true;
+                cat.color = Color.red;
+            }
+            else if (loudness < loudnessThreshold)
+            {
+                cat.color = Color.white;
+            }
         }
-        else if (loudness < loudnessThreshold)
+
+        if (CatHear && !pressing)
         {
-            cat.color = Color.white;
+            timer += Time.deltaTime;
+            CommentBox.SetActive(true);
+            if (timer >= 3)
+            {
+                CommentBox.SetActive(false);
+                CatHear = false;
+                timer = 0;
+            }
         }
     }
 
@@ -56,5 +74,15 @@ public class MicrophoneManager : MonoBehaviour
             }
         }
         return levelMax * sensitivity;
+    }
+
+    public void IsPress()
+    {
+        pressing = true;
+    }
+    
+    public void NotPress()
+    {
+        pressing = false;
     }
 }

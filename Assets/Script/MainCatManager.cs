@@ -26,13 +26,6 @@ public class MainCatManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            CatEXP = 0;
-            PlayerPrefs.SetInt("CatEXP", 0);
-            PlayerPrefs.Save();
-        }
-
         if (CatEXP >= 100)
         {
             cat.color = Color.green;

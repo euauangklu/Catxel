@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class ResetManager : MonoBehaviour
 {
     [SerializeField] private TMP_InputField inputField;
-
+    [SerializeField] private MainCatManager MainCatManager;
+    [SerializeField] private CatFoodScript CatFoodScript;
     public void CheckForReset()
     {
         if (inputField.text.ToLower() == "reset")
@@ -18,5 +19,7 @@ public class ResetManager : MonoBehaviour
     void ReloadGameData()
     {
         BuyItemManager.Instance.ReloadItems();
+        CatFoodScript.ConsoleResetCatFood();
+        MainCatManager.ConsoleReset();
     }
 }

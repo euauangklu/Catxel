@@ -58,4 +58,11 @@ public class MainCatManager : MonoBehaviour
         PlayerPrefs.SetInt("CatEXP", CatEXP);
         PlayerPrefs.Save();
     }
+
+    public void ConsoleReset()
+    {
+        CatEXP = 0;
+        PlayerPrefs.SetInt("CatEXP", CatEXP);
+        PlayerPrefs.Save();
+    }
 }

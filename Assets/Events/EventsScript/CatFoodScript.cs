@@ -85,7 +85,7 @@ public class CatFoodScript : MonoBehaviour
                     {
                         Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
                         Collider2D col = Physics2D.OverlapPoint(touchPos);
-                        if (col != null && col.gameObject == this.gameObject)
+                        if (col != null && col.gameObject == this.gameObject || col != null && col.gameObject == CatFoodIcon.gameObject)
                         {
                             CatFoodAnimationObj.SetActive(true);
                             CatFoodIcon.SetActive(false);
@@ -153,5 +153,10 @@ public class CatFoodScript : MonoBehaviour
         StartCooldown = true;
         ShakingTime = 0;
         CatFoodAnimationObj.transform.rotation = Quaternion.identity;
+    }
+
+    public void ConsoleResetCatFood()
+    {
+        CatFoodNum = 0;
     }
 }

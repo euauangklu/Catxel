@@ -29,9 +29,6 @@ public class CatTrash : MonoBehaviour
         {
             eventSource.OnEventDone();
         }
-        MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP += MainCatManager.MainCat.GetComponent<MainCatManager>().EXPPerEvent;
-        PlayerPrefs.SetInt("CatEXP", MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP);
-        PlayerPrefs.Save();
         Destroy(gameObject);
     }
 }

@@ -56,7 +56,21 @@ public partial class AreaWalkAction : Action
             return Status.Success;
         }
         
-        Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, targetPosition, WalkSpeed * 0.48f * Time.deltaTime);
+        Vector2 currentPosition = Agent.Value.transform.position;
+        Vector2 direction = (targetPosition - currentPosition).normalized;
+        float distance = Vector2.Distance(currentPosition, targetPosition);
+        RaycastHit2D hit = Physics2D.Raycast(currentPosition, direction, distance, LayerMask.GetMask("Obstacle"));
+        if (hit.collider != null)
+        {
+            PickNewTarget();
+            return Status.Running;
+        }
+        
+        if (hit.collider == null)
+        {
+            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, targetPosition, WalkSpeed * 0.48f * Time.deltaTime);
+        }
+        
         if (Vector2.Distance(Agent.Value.transform.position, targetPosition) < 0.001f)
         {
             Waiting = true;

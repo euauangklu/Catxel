@@ -3,52 +3,50 @@ using UnityEngine;
 public class CameraPan : MonoBehaviour
 {
     private Vector3 lastPanPosition;
-    private bool isPanning;
+    private Vector3 targetPosition;
 
     [SerializeField] private float minX = -5f;
     [SerializeField] private float maxX = 5f;
 
+    [SerializeField] private float panSmoothSpeed = 10f;
+
+    [SerializeField] private RandomEventManager RandomEventManager;
+
+    void Start()
+    {
+        targetPosition = transform.position;
+    }
+
     void Update()
     {
-        Vector3 currentPanPosition;
-
-#if UNITY_EDITOR || UNITY_STANDALONE
-        if (Input.GetMouseButtonDown(0))
+        if (RandomEventManager.EventRandom)
         {
-            lastPanPosition = GetWorldPos(Input.mousePosition);
-            isPanning = true;
+            transform.position = new Vector3(0,0,-10);
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (!RandomEventManager.EventRandom)
         {
-            isPanning = false;
-        }
-
-        if (isPanning)
-        {
-            currentPanPosition = GetWorldPos(Input.mousePosition);
-            PanCamera(currentPanPosition);
-        }
-#endif
-
-
-        if (Input.touchCount == 1)
-        {
-            Touch touch = Input.GetTouch(0);
-            currentPanPosition = GetWorldPos(touch.position);
-
-            if (touch.phase == TouchPhase.Began)
+            if (Input.touchCount == 1)
             {
-                lastPanPosition = currentPanPosition;
-            }
-            else if (touch.phase == TouchPhase.Moved)
-            {
-                PanCamera(currentPanPosition);
-            }
-        }
+                Touch touch = Input.GetTouch(0);
+                Vector3 currentPanPosition = GetWorldPos(touch.position);
 
-        Vector3 clamped = transform.position;
-        clamped.x = Mathf.Clamp(clamped.x, minX, maxX);
-        transform.position = clamped;
+                if (touch.phase == TouchPhase.Began)
+                {
+                    lastPanPosition = currentPanPosition;
+                }
+                else if (touch.phase == TouchPhase.Moved)
+                {
+                    Vector3 diff = lastPanPosition - currentPanPosition;
+                    targetPosition += new Vector3(diff.x, 0f, 0f);
+                    lastPanPosition = currentPanPosition;
+                }
+            }
+
+            targetPosition.x = Mathf.Clamp(targetPosition.x, minX, maxX);
+            targetPosition.y = transform.position.y;
+            targetPosition.z = transform.position.z;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, panSmoothSpeed * Time.deltaTime);
+        }
     }
 
     private Vector3 GetWorldPos(Vector3 screenPos)
@@ -56,12 +54,5 @@ public class CameraPan : MonoBehaviour
         Vector3 world = Camera.main.ScreenToWorldPoint(screenPos);
         world.z = 0f;
         return world;
-    }
-
-    private void PanCamera(Vector3 currentPanPosition)
-    {
-        Vector3 diff = lastPanPosition - currentPanPosition;
-        transform.position += new Vector3(diff.x, 0f, 0f);
-        lastPanPosition = currentPanPosition;
     }
 }

@@ -4,6 +4,8 @@ using Random = UnityEngine.Random;
 
 public class RandomEventManager : MonoBehaviour
 {
+    public static RandomEventManager Rem;
+    
     [SerializeField] private GameObject Cat;
     
     public bool EventRandom;

@@ -121,6 +121,7 @@ MonoBehaviour:
   - rid: 7020319573144240635
   - rid: 376079205622350581
   - rid: 376079340356502041
+  - rid: 376079594578247878
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -142,6 +143,14 @@ MonoBehaviour:
           m_Value1: 14633185746013170450
         Name: Drag NDrop
         m_Value: {fileID: 4184097782387120046}
+    - rid: 376079594578247878
+      type: {class: 'BlackboardVariable`1[[RandomEventManager, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7126610062262831662
+          m_Value1: 13636118659622914745
+        Name: RandomEventManager
+        m_Value: {fileID: 0}
     - rid: 7020319550385160410
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:

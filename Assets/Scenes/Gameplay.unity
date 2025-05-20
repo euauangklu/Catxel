@@ -789,6 +789,7 @@ MonoBehaviour:
   maxX: 1
   panSmoothSpeed: 10
   RandomEventManager: {fileID: 1078040889}
+  MicrophoneManager: {fileID: 1693541265}
 --- !u!1 &220745429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,7 +2208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a0de1debc295542a5c10f28e62f229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: Box01
+  itemID: Sofa01
   itemPrice: 100
   SoldOut: {fileID: 152661776}
   Button: {fileID: 577762901}
@@ -2255,7 +2256,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2924282998836503536, guid: 242b1be2100bdfd4d8bb4b8e0bf5c770, type: 3}
+  m_Sprite: {fileID: 6123948246743042702, guid: a11f6e138e545f64aaeefeb2fca7dbf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2275,7 +2276,7 @@ Transform:
   m_GameObject: {fileID: 577066975}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.72519964, y: 0.45551014, z: 0}
+  m_LocalPosition: {x: -0.586612, y: 0.50974214, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3237,9 +3238,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2924282998836503536, guid: 242b1be2100bdfd4d8bb4b8e0bf5c770, type: 3}
+  m_Sprite: {fileID: 6123948246743042702, guid: a11f6e138e545f64aaeefeb2fca7dbf4, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3288,11 +3289,13 @@ MonoBehaviour:
   EventRandom: 0
   gameEvents:
   - {fileID: 11400000, guid: f36bf90bf7e632b479749095244cfd90, type: 2}
-  - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
   - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
-  - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
+  - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
   - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
-  EventTimer: 5000
+  - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
+  EventTimer: 50000
+  DoneEvent: 0
+  isInCatButtEvent: 0
 --- !u!4 &1078040890
 Transform:
   m_ObjectHideFlags: 0
@@ -4088,7 +4091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1411846278
 SpriteRenderer:
   m_ObjectHideFlags: 0

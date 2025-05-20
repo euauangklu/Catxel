@@ -29,6 +29,7 @@ public class CatClimbCurtainEvent : GameEvents
     {
         if (manager != null)
         {
+            manager.DoneEvent = true;
             manager.ResetRandomEvent();
         }
     }

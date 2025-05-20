@@ -31,4 +31,17 @@ public class BuyItemManager : MonoBehaviour
             item.LoadBuyState();
         }
     }
+    
+    public bool IsItemBought(string itemID)
+    {
+        foreach (var item in allItems)
+        {
+            if (item.ItemID == itemID)
+            {
+                return item.AlreadyBuy;
+            }
+        }
+
+        return false;
+    }
 }

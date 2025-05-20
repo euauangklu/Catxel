@@ -12,6 +12,8 @@ public class CameraPan : MonoBehaviour
 
     [SerializeField] private RandomEventManager RandomEventManager;
 
+    [SerializeField] private MicrophoneManager MicrophoneManager;
+
     void Start()
     {
         targetPosition = transform.position;
@@ -19,11 +21,17 @@ public class CameraPan : MonoBehaviour
 
     void Update()
     {
-        if (RandomEventManager.EventRandom)
+        if (RandomEventManager.isInCatButtEvent)
         {
             transform.position = new Vector3(0,0,-10);
         }
-        else if (!RandomEventManager.EventRandom)
+        
+        if (MicrophoneManager.pressing)
+        {
+            return;
+        }
+        
+        if (!MicrophoneManager.pressing && !RandomEventManager.isInCatButtEvent)
         {
             if (Input.touchCount == 1)
             {

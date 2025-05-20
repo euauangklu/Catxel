@@ -21,12 +21,15 @@ public class CatButtEvent : GameEvents
         }
 
         manager = mgr;
+        manager.isInCatButtEvent = true;
     }
 
     public void OnEventDone()
     {
         if (manager != null)
         {
+            manager.isInCatButtEvent = false;
+            manager.DoneEvent = true;
             manager.ResetRandomEvent();
         }
     }

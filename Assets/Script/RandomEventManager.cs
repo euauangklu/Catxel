@@ -14,7 +14,11 @@ public class RandomEventManager : MonoBehaviour
 
     public float EventTimer;
 
+    public bool DoneEvent;
+
     private float Timer;
+    
+    public bool isInCatButtEvent = false;
     
     void Start()
     {
@@ -30,11 +34,11 @@ public class RandomEventManager : MonoBehaviour
 
     void Update()
     {
-        if (Timer < EventTimer)
+        if (Timer < EventTimer && !EventRandom)
         {
             Timer += Time.deltaTime;
         }
-        if (!EventRandom && Timer >= EventTimer)
+        if (!EventRandom && Timer >= EventTimer && !DoneEvent)
         {
             TriggerRandomEvent();
         }
@@ -48,15 +52,24 @@ public class RandomEventManager : MonoBehaviour
 
     public void ResetRandomEvent()
     {
-        MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP += MainCatManager.MainCat.GetComponent<MainCatManager>().EXPPerEvent;
-        PlayerPrefs.SetInt("CatEXP", MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP);
-        PlayerPrefs.Save();
-        MoneyManager.Instance.SpawningPrefab(5);
+        if (DoneEvent)
+        {
+            MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP += MainCatManager.MainCat.GetComponent<MainCatManager>().EXPPerEvent;
+            PlayerPrefs.SetInt("CatEXP", MainCatManager.MainCat.GetComponent<MainCatManager>().CatEXP);
+            PlayerPrefs.Save();
+            MoneyManager.Instance.SpawningPrefab(5); 
+        }
         Cat.SetActive(true);
-        EventRandom = false;
         Timer = 0;
+        DoneEvent = false;
+        Invoke(nameof(ResetEventFlag), 0.01f);
     }
 
+    private void ResetEventFlag()
+    {
+        EventRandom = false;
+    }
+    
     public void OnApplicationQuit()
     {
         PlayerPrefs.SetString("LastPlayTime", DateTime.Now.ToBinary().ToString());

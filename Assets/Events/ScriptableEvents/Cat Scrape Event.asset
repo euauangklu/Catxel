@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cb9aa472051573448b1eb825550d093, type: 3}
-  m_Name: Cat Scrape
+  m_Name: Cat Scrape Event
   m_EditorClassIdentifier: 
   _gameObject: {fileID: 186558091959930709, guid: 4e8a58fd25978bb42a4cca0014121be2, type: 3}
+  requiredItemID: Sofa01

@@ -30,6 +30,7 @@ public class CatHideEvent : GameEvents
     {
         if (manager != null)
         {
+            manager.DoneEvent = true;
             manager.ResetRandomEvent();
         }
     }

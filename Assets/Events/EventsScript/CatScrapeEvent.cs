@@ -5,31 +5,45 @@ public class CatScrapeEvent : GameEvents
 {
     [SerializeField] private GameObject _gameObject;
     
+    [SerializeField] private string requiredItemID;
+    
     private GameObject MainCat;
     
     private GameObject ScrapePoint;
     
     private RandomEventManager manager;
-
+    
     public override void TriggerEvent(RandomEventManager mgr)
     {
-        MainCat = GameObject.FindWithTag("MainCat");
-        GameObject ScrapePoint = GameObject.FindWithTag("ScrapePoint");
-        GameObject obj = Instantiate(_gameObject,ScrapePoint.transform.position, Quaternion.identity);
-        CatScrape cat = obj.GetComponent<CatScrape>();
-        MainCat.SetActive(false);
-        if (cat != null)
-        {
-            cat.eventSource = this;
-        }
-        
         manager = mgr;
+        
+        if (!BuyItemManager.Instance.IsItemBought(requiredItemID))
+        {
+            OnEventDone();
+        }
+
+        else if (BuyItemManager.Instance.IsItemBought(requiredItemID))
+        {
+            MainCat = GameObject.FindWithTag("MainCat");
+            GameObject ScrapePoint = GameObject.FindWithTag("ScrapePoint");
+            GameObject obj = Instantiate(_gameObject,ScrapePoint.transform.position, Quaternion.identity);
+            CatScrape cat = obj.GetComponent<CatScrape>();
+            MainCat.SetActive(false);
+            if (cat != null)
+            {
+                cat.eventSource = this;
+            }
+        }
     }
     
     public void OnEventDone()
     {
         if (manager != null)
         {
+            if (BuyItemManager.Instance.IsItemBought(requiredItemID))
+            {
+                manager.DoneEvent = true;
+            }
             manager.ResetRandomEvent();
         }
     }

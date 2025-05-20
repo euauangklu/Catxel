@@ -8,7 +8,7 @@ public class MicrophoneManager : MonoBehaviour
     private string device;
     private bool micInitialized;
     [SerializeField] private SpriteRenderer cat;
-    [SerializeField] private bool pressing;
+    public bool pressing;
     private bool CatHear;
     [SerializeField] private GameObject CommentBox;
     private float timer;

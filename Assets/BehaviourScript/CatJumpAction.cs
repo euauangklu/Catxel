@@ -50,11 +50,7 @@ public partial class CatJumpAction : Action
         {
             return Status.Success;
         }
-
-        if (RandomEventManager.Rem.EventRandom)
-        {
-            return Status.Success;
-        }
+        
         // Walk To StartPoint
         if (Vector2.Distance(Agent.Value.transform.position, Start.Value.transform.position) > 0.1f && !JumpReady)
         {

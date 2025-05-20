@@ -42,6 +42,7 @@ public class CatTrashEvent : GameEvents
     {
         if (manager != null)
         {
+            manager.DoneEvent = true;
             manager.ResetRandomEvent();
         }
     }

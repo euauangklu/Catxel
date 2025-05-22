@@ -13,6 +13,9 @@ TagManager:
   - HidePoint
   - CatFood
   - CommentBox
+  - MiniGameButton
+  - RandomEventManager
+  - Stick
   layers:
   - Default
   - TransparentFX

@@ -4,8 +4,6 @@ using Random = UnityEngine.Random;
 
 public class RandomEventManager : MonoBehaviour
 {
-    public static RandomEventManager Rem;
-    
     [SerializeField] private GameObject Cat;
     
     public bool EventRandom;
@@ -19,6 +17,8 @@ public class RandomEventManager : MonoBehaviour
     private float Timer;
     
     public bool isInCatButtEvent = false;
+    
+    public bool isInCatStickEvent = false;
     
     void Start()
     {

@@ -33,7 +33,7 @@ public class CameraPan : MonoBehaviour
             return;
         }
         
-        if (!MicrophoneManager.pressing && !RandomEventManager.isInCatButtEvent && !DragNDrop.isDragging)
+        if (!MicrophoneManager.pressing && !RandomEventManager.isInCatButtEvent && !RandomEventManager.isInCatStickEvent && !DragNDrop.isDragging)
         {
             if (Input.touchCount == 1)
             {

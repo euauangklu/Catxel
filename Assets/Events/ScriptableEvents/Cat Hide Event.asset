@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Cat Hide Event
   m_EditorClassIdentifier: 
   _gameObject: {fileID: 5285968278168873835, guid: 4cb4366dce125ad44ac4ef3646cb37ef, type: 3}
+  requiredItemID: Tree01

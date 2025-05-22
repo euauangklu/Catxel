@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class ShopItem : MonoBehaviour
@@ -9,10 +10,12 @@ public class ShopItem : MonoBehaviour
     public int itemPrice = 100;
     [SerializeField] private GameObject SoldOut;
     [SerializeField] private GameObject Button;
+    [SerializeField] private TextMeshProUGUI TextPrice;
     private bool alreadyBuy;
 
     private void Awake()
     {
+        TextPrice.text = itemPrice.ToString();
     }
     
     public void LoadBuyState()

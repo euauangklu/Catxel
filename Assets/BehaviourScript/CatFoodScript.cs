@@ -8,6 +8,7 @@ public class CatFoodScript : MonoBehaviour
     [SerializeField] private GameObject CatFoodIcon;
     [SerializeField] private GameObject CatFoodAnimationObj;
     public RandomEventManager RandomEventManager;
+    public bool SpawnCoins;
     [SerializeField] private float SetHours;
     private bool PlayAnimation;
     private bool Done;
@@ -96,6 +97,8 @@ public class CatFoodScript : MonoBehaviour
 
                 if (Done)
                 {
+                    SpawnCoins = true;
+                    MoneyManager.Instance.SpawningPrefab(5);
                     CatFoodNum = 3;
                     CatFoodAnimationObj.SetActive(false);
                 }

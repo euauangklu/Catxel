@@ -5,6 +5,8 @@ public class CatHideEvent : GameEvents
 {
     [SerializeField] private GameObject _gameObject;
     
+    [SerializeField] private string requiredItemID;
+    
     private GameObject MainCat;
     
     private GameObject HidePoint;
@@ -13,24 +15,34 @@ public class CatHideEvent : GameEvents
     
     public override void TriggerEvent(RandomEventManager mgr)
     {
-        MainCat = GameObject.FindWithTag("MainCat");
-        GameObject HidePoint = GameObject.FindWithTag("HidePoint");
-        GameObject obj = Instantiate(_gameObject,HidePoint.transform.position, Quaternion.identity);
-        CatHide cat = obj.GetComponent<CatHide>();
-        MainCat.SetActive(false);
-        if (cat != null)
-        {
-            cat.eventSource = this;
-        }
-        
         manager = mgr;
+        
+        if (!BuyItemManager.Instance.IsItemBought(requiredItemID))
+        {
+            OnEventDone();
+        }
+        else if (BuyItemManager.Instance.IsItemBought(requiredItemID))
+        {
+            MainCat = GameObject.FindWithTag("MainCat");
+            GameObject HidePoint = GameObject.FindWithTag("HidePoint");
+            GameObject obj = Instantiate(_gameObject, HidePoint.transform.position, Quaternion.identity);
+            CatHide cat = obj.GetComponent<CatHide>();
+            MainCat.SetActive(false);
+            if (cat != null)
+            {
+                cat.eventSource = this;
+            }
+        }
     }
     
     public void OnEventDone()
     {
         if (manager != null)
         {
-            manager.DoneEvent = true;
+            if (BuyItemManager.Instance.IsItemBought(requiredItemID))
+            {
+                manager.DoneEvent = true;
+            }
             manager.ResetRandomEvent();
         }
     }

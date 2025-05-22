@@ -13,6 +13,8 @@ public class CameraPan : MonoBehaviour
     [SerializeField] private RandomEventManager RandomEventManager;
 
     [SerializeField] private MicrophoneManager MicrophoneManager;
+    
+    [SerializeField] private DragNDrop DragNDrop;
 
     void Start()
     {
@@ -26,12 +28,12 @@ public class CameraPan : MonoBehaviour
             transform.position = new Vector3(0,0,-10);
         }
         
-        if (MicrophoneManager.pressing)
+        if (MicrophoneManager.pressing || DragNDrop.isDragging)
         {
             return;
         }
         
-        if (!MicrophoneManager.pressing && !RandomEventManager.isInCatButtEvent)
+        if (!MicrophoneManager.pressing && !RandomEventManager.isInCatButtEvent && !DragNDrop.isDragging)
         {
             if (Input.touchCount == 1)
             {

@@ -10,6 +10,8 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] private GameObject ShopList;
     [SerializeField] private GameObject Coins;
     [SerializeField] private GameObject MainCat;
+    [SerializeField] private GameObject CatFoodBowl;
+    [SerializeField] private CatFoodScript CatFoodScript;
     [SerializeField] private float DelaySpawnTimer;
     private float timer; 
     private int spawnCount = 0;
@@ -37,13 +39,21 @@ public class MoneyManager : MonoBehaviour
         }
         if (timer >= DelaySpawnTimer)
         {
-            Instantiate(Coins, MainCat.transform.position, Quaternion.identity);
+            if (CatFoodScript.SpawnCoins)
+            {
+                Instantiate(Coins, CatFoodBowl.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(Coins, MainCat.transform.position, Quaternion.identity);
+            }
             timer = 0f;
             spawnCount++;
 
             if (spawnCount >= maxSpawn)
             {
                 isSpawning = false; 
+                CatFoodScript.SpawnCoins = false;
             }
         }
         //MoneyText

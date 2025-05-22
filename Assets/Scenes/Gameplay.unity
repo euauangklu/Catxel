@@ -183,6 +183,8 @@ MonoBehaviour:
   ShopList: {fileID: 137943541}
   Coins: {fileID: 2309987449909378677, guid: 35216a71dbff4434f8baadf79fa37148, type: 3}
   MainCat: {fileID: 1775610328}
+  CatFoodBowl: {fileID: 225690496}
+  CatFoodScript: {fileID: 225690499}
   DelaySpawnTimer: 0.25
 --- !u!4 &25138202
 Transform:
@@ -787,9 +789,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -1
   maxX: 1
-  panSmoothSpeed: 10
+  panSmoothSpeed: 1
   RandomEventManager: {fileID: 1078040889}
   MicrophoneManager: {fileID: 1693541265}
+  DragNDrop: {fileID: 1775610336}
 --- !u!1 &220745429
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +931,7 @@ MonoBehaviour:
   CatFoodIcon: {fileID: 303610222}
   CatFoodAnimationObj: {fileID: 151653958}
   RandomEventManager: {fileID: 1078040889}
+  SpawnCoins: 0
   SetHours: 6
 --- !u!61 &225690500
 BoxCollider2D:
@@ -2195,7 +2199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &577066976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2209,9 +2213,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: Sofa01
-  itemPrice: 100
+  itemPrice: 300
   SoldOut: {fileID: 152661776}
   Button: {fileID: 577762901}
+  TextPrice: {fileID: 1493755413}
 --- !u!212 &577066977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2458,7 +2463,7 @@ GameObject:
   - component: {fileID: 602924086}
   - component: {fileID: 602924085}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TextItem2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2503,9 +2508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Buy
-
-'
+  m_text: Buy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2906,7 +2909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &879922004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2919,10 +2922,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a0de1debc295542a5c10f28e62f229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: Box02
-  itemPrice: 300
+  itemID: Tree01
+  itemPrice: 200
   SoldOut: {fileID: 355605105}
   Button: {fileID: 122160120}
+  TextPrice: {fileID: 602924085}
 --- !u!4 &879922005
 Transform:
   m_ObjectHideFlags: 0
@@ -2932,7 +2936,7 @@ Transform:
   m_GameObject: {fileID: 879922003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48999998, y: 0.45551014, z: 0}
+  m_LocalPosition: {x: 0.656801, y: -0.77638364, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2982,7 +2986,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2924282998836503536, guid: 242b1be2100bdfd4d8bb4b8e0bf5c770, type: 3}
+  m_Sprite: {fileID: -9179855004428792202, guid: a11f6e138e545f64aaeefeb2fca7dbf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3293,7 +3297,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
   - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
   - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
-  EventTimer: 50000
+  EventTimer: 50
   DoneEvent: 0
   isInCatButtEvent: 0
 --- !u!4 &1078040890
@@ -4481,7 +4485,7 @@ GameObject:
   - component: {fileID: 1493755414}
   - component: {fileID: 1493755413}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TextItem1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4526,9 +4530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Buy
-
-'
+  m_text: Buy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5070,9 +5072,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2924282998836503536, guid: 242b1be2100bdfd4d8bb4b8e0bf5c770, type: 3}
+  m_Sprite: {fileID: -9179855004428792202, guid: a11f6e138e545f64aaeefeb2fca7dbf4, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5489,6 +5491,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd370c387106b345abd8cdc149ebc44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1775610336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4184097782387120046, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
+  m_PrefabInstance: {fileID: 3266604922347866023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775610328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f210bf726260d4db289bd904be36a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1821398461
@@ -6626,7 +6639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1964920859
 SpriteRenderer:
   m_ObjectHideFlags: 0

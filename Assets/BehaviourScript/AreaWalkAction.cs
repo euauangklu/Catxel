@@ -35,7 +35,8 @@ public partial class AreaWalkAction : Action
     
     private DragNDrop dragNDrop;
 
-    private Rigidbody2D rb;
+    private bool RandomRunOrWalk;
+    
 
     protected override Status OnStart()
     {
@@ -43,7 +44,6 @@ public partial class AreaWalkAction : Action
         RecentPosition = Agent.Value.transform.position;
         WaitTimer = WaitTime.Value;
         Animator = Agent.Value.GetComponentInChildren<Animator>();
-        rb = Agent.Value.GetComponent<Rigidbody2D>();
         dragNDrop = Agent.Value.GetComponent<DragNDrop>();
         return Status.Running;
     }
@@ -86,12 +86,17 @@ public partial class AreaWalkAction : Action
             else
             {
                 Waiting = false;
+                RandomRunOrWalk = false;
                 return Status.Success;
             }
         }
         else if (!Waiting)
         {
-            Animator.SetFloat(AnimatorSpeedParam,1);
+            if (!RandomRunOrWalk)
+            {
+                Animator.SetFloat(AnimatorSpeedParam,Random.Range(1, 3));
+                RandomRunOrWalk = true;
+            }
             if (RecentPosition.x > targetPosition.x && !FacingRight)
             {
                 Flip();

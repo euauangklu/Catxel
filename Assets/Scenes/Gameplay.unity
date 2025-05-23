@@ -3722,6 +3722,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
   - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
   - {fileID: 11400000, guid: f2cac8e455cce584b9cecd03e2aad828, type: 2}
+  - {fileID: 11400000, guid: 62274cd1d734fc04a8b304fc6d31bc14, type: 2}
   EventTimer: 20
   DoneEvent: 0
   isInCatButtEvent: 0

@@ -35,6 +35,10 @@ public partial class CatJumpAction : Action
     private bool DoneSit;
     
     private DragNDrop dragNDrop;
+
+    private float WaitAnimTime;
+
+    private bool DoneSitAnim;
     protected override Status OnStart()
     {
         dragNDrop = Agent.Value.GetComponent<DragNDrop>();
@@ -68,14 +72,14 @@ public partial class CatJumpAction : Action
         // Check if already at StartPoint
         if (Vector2.Distance(Agent.Value.transform.position, Start.Value.transform.position) < 0.1f)
         {
-            JumpReady = true;
-            Animator.SetBool(AnimatorJumpParam,true);
             Animator.SetFloat(AnimatorSpeedParam,0);
+            Animator.SetBool(AnimatorJumpParam,true);
+            ActiveJumpAnim();
         }
         // Start Jump to MidPoint
         if (JumpReady && !DoneSit)
         {
-            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,Mid.Value.transform.position,WalkSpeed * 1f * Time.deltaTime);
+            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,Mid.Value.transform.position,WalkSpeed * 1.3f * Time.deltaTime);
         }
         // Play Sit Animation
         if (Vector2.Distance(Agent.Value.transform.position, Mid.Value.transform.position) < 0.1f && !DoneSit)
@@ -98,11 +102,15 @@ public partial class CatJumpAction : Action
             {
                 Agent.Value.transform.localScale = new Vector2(-1, 1);
             }
-            Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,End.Value.transform.position,WalkSpeed * 1f * Time.deltaTime);
             Animator.SetBool(AnimatorJumpParam,true);
+            ActiveJumpAnim();
+            if (DoneSitAnim)
+            {
+                Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position,End.Value.transform.position,WalkSpeed * 1.3f * Time.deltaTime);
+            }
         }
         // Check if already at EndPoint
-        if (Vector2.Distance(Agent.Value.transform.position, End.Value.transform.position) < 0.1f)
+        if (Vector2.Distance(Agent.Value.transform.position, End.Value.transform.position) < 0.1f && DoneSitAnim)
         {
             Animator.SetBool(AnimatorJumpParam,false);
             return Status.Success;
@@ -116,6 +124,22 @@ public partial class CatJumpAction : Action
         Agent.Value.transform.localScale = CurrentScale;
         JumpReady = false;
         DoneSit = false;
+        DoneSitAnim = false;
+    }
+
+    public void ActiveJumpAnim()
+    {
+        WaitAnimTime += Time.deltaTime;
+        if (WaitAnimTime > 0.35f && !DoneSit)
+        {
+            JumpReady = true;
+            WaitAnimTime = 0;
+        }
+        else if(WaitAnimTime > 0.35f && DoneSit)
+        {
+            DoneSitAnim = true;
+            WaitAnimTime = 0;
+        }
     }
 }
 

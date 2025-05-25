@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 20324170}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32999998, y: 0.49, z: 0}
+  m_LocalPosition: {x: 0.060000002, y: 0.26999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3717,12 +3717,12 @@ MonoBehaviour:
   EventRandom: 0
   gameEvents:
   - {fileID: 11400000, guid: f36bf90bf7e632b479749095244cfd90, type: 2}
-  - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
   - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
+  - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
   - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
+  - {fileID: 11400000, guid: 62274cd1d734fc04a8b304fc6d31bc14, type: 2}
   - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
   - {fileID: 11400000, guid: f2cac8e455cce584b9cecd03e2aad828, type: 2}
-  - {fileID: 11400000, guid: 62274cd1d734fc04a8b304fc6d31bc14, type: 2}
   EventTimer: 20
   DoneEvent: 0
   isInCatButtEvent: 0
@@ -4102,7 +4102,7 @@ Transform:
   m_GameObject: {fileID: 1237312062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 0.09, z: 0}
+  m_LocalPosition: {x: 0.48, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7522,7 +7522,7 @@ Transform:
   m_GameObject: {fileID: 1972838827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22999999, y: 0.16, z: 0}
+  m_LocalPosition: {x: 0.48, y: 0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

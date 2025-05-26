@@ -864,8 +864,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -1
   maxX: 1
-  panSpeedMultiplier: 0.15
-  friction: 1
+  moveSpeed: 3
+  friction: 4
   RandomEventManager: {fileID: 1078040889}
   MicrophoneManager: {fileID: 1693541265}
 --- !u!1 &220745429
@@ -1570,8 +1570,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c692b8d46e16f9441b530564ffd2a31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ValueNum: 0.1
-  Timer: 0
+  ValueNum: 1
+  targetValue: 20
+  stepValue: 20
+  incrementDelay: 0.01
   DeactiveList:
   - {fileID: 1693541260}
   - {fileID: 1117760933}
@@ -3720,9 +3722,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f36bf90bf7e632b479749095244cfd90, type: 2}
   - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
   - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
-  - {fileID: 11400000, guid: 62274cd1d734fc04a8b304fc6d31bc14, type: 2}
   - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
   - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
+  - {fileID: 11400000, guid: 62274cd1d734fc04a8b304fc6d31bc14, type: 2}
   - {fileID: 11400000, guid: f2cac8e455cce584b9cecd03e2aad828, type: 2}
   EventTimer: 50
   DoneEvent: 0

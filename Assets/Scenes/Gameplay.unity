@@ -864,10 +864,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -1
   maxX: 1
-  panSmoothSpeed: 4
+  panSpeedMultiplier: 0.15
+  friction: 1
   RandomEventManager: {fileID: 1078040889}
   MicrophoneManager: {fileID: 1693541265}
-  DragNDrop: {fileID: 1775610336}
 --- !u!1 &220745429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c692b8d46e16f9441b530564ffd2a31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ValueNum: 10
+  ValueNum: 0.1
+  Timer: 0
   DeactiveList:
   - {fileID: 1693541260}
   - {fileID: 1117760933}
@@ -3446,7 +3447,7 @@ Transform:
   m_GameObject: {fileID: 886666766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.72999996, z: 0}
+  m_LocalPosition: {x: -0.32, y: -1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3717,13 +3718,13 @@ MonoBehaviour:
   EventRandom: 0
   gameEvents:
   - {fileID: 11400000, guid: f36bf90bf7e632b479749095244cfd90, type: 2}
-  - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
   - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
-  - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
+  - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
   - {fileID: 11400000, guid: 62274cd1d734fc04a8b304fc6d31bc14, type: 2}
   - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
+  - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
   - {fileID: 11400000, guid: f2cac8e455cce584b9cecd03e2aad828, type: 2}
-  EventTimer: 20
+  EventTimer: 50
   DoneEvent: 0
   isInCatButtEvent: 0
   isInCatStickEvent: 0
@@ -5752,7 +5753,7 @@ Transform:
   m_GameObject: {fileID: 1688060301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.42999998, y: 1.42, z: 0}
+  m_LocalPosition: {x: -0.55, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6082,17 +6083,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd370c387106b345abd8cdc149ebc44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1775610336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4184097782387120046, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
-  m_PrefabInstance: {fileID: 3266604922347866023}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775610328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f210bf726260d4db289bd904be36a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1821398461
@@ -7953,6 +7943,10 @@ PrefabInstance:
       propertyPath: managedReferences[7020319550385160522].m_Value
       value: 
       objectReference: {fileID: 1348179353}
+    - target: {fileID: 9093100329530773133, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
+      propertyPath: managedReferences[7020319562650878157].m_Value
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9093100329530773133, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
       propertyPath: managedReferences[7020319562650878185].m_Value
       value: 

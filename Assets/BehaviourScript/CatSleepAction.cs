@@ -16,6 +16,8 @@ public partial class SleepAction : Action
     [SerializeReference] public BlackboardVariable<string> AnimatorSleepParam = new BlackboardVariable<string>("Sleep");
     
     [SerializeReference] public BlackboardVariable<string> AnimatorSleepParamNum = new BlackboardVariable<string>("SleepMagnitude");
+    
+    [SerializeReference] public BlackboardVariable<string> AnimatorSpeedParam = new BlackboardVariable<string>("SpeedMagnitude");
 
     private Animator Animator;
     
@@ -24,6 +26,10 @@ public partial class SleepAction : Action
     private float RandomSleepAnim;
     
     private DragNDrop dragNDrop;
+
+    private float WaitTimer = 3;
+    
+    private float TimeCount;
     
     protected override Status OnStart()
     {
@@ -42,16 +48,25 @@ public partial class SleepAction : Action
             Animator.SetBool(AnimatorSleepParam, false);
             return Status.Success;
         }
-        
-        if (SleepTimer > 0)
+
+        if (TimeCount <= WaitTimer)
         {
-            SleepTimer -= Time.deltaTime;
-            Animator.SetBool(AnimatorSleepParam,true);
+            TimeCount += Time.deltaTime;
+            Animator.SetFloat(AnimatorSpeedParam,0);
         }
-        if (SleepTimer <= 0f)
+        if (TimeCount > WaitTimer)
         {
-            Animator.SetBool(AnimatorSleepParam,false);
-            return Status.Success;
+            if (SleepTimer > 0)
+            {
+                SleepTimer -= Time.deltaTime;
+                Animator.SetBool(AnimatorSleepParam,true);
+            }
+            if (SleepTimer <= 0f)
+            {
+                Animator.SetBool(AnimatorSleepParam,false);
+                TimeCount = 0;
+                return Status.Success;
+            }
         }
         return Status.Running;
     }

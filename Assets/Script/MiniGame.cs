@@ -6,6 +6,7 @@ public class MiniGame : MonoBehaviour
 {
     public static GameObject MiniGameButton;
     [SerializeField]private float ValueNum;
+    [SerializeField] private float Timer;
     [SerializeField] private List<GameObject> DeactiveList;
     [SerializeField] private List<GameObject> HeartList;
     [SerializeField] private Slider Slider;
@@ -81,5 +82,9 @@ public class MiniGame : MonoBehaviour
         HeartValue = 0;
         Slider.value = 0;
         gameObject.SetActive(false);
+        for (int i = 0; i < HeartList.Count; i++)
+        {
+            HeartList[i].SetActive(false);
+        }
     }
 }

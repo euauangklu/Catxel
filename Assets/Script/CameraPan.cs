@@ -3,60 +3,75 @@ using UnityEngine;
 public class CameraPan : MonoBehaviour
 {
     private Vector3 lastPanPosition;
-    private Vector3 targetPosition;
+    
+    private Vector3 velocity;
 
     [SerializeField] private float minX = -5f;
+    
     [SerializeField] private float maxX = 5f;
-
-    [SerializeField] private float panSmoothSpeed = 10f;
+    
+    [SerializeField] private float panSpeedMultiplier = 1.0f;
+    
+    [SerializeField] private float friction = 5f;
 
     [SerializeField] private RandomEventManager RandomEventManager;
 
     [SerializeField] private MicrophoneManager MicrophoneManager;
     
-    [SerializeField] private DragNDrop DragNDrop;
-
-    void Start()
-    {
-        targetPosition = transform.position;
-    }
+    private DragNDrop DragNDrop;
+    
+    private bool isTouchingDraggable = false;
 
     void Update()
     {
-        if (RandomEventManager.isInCatButtEvent)
+        if (RandomEventManager != null && RandomEventManager.isInCatButtEvent)
         {
-            transform.position = new Vector3(0,0,-10);
-        }
-        
-        if (MicrophoneManager.pressing || DragNDrop.isDragging)
-        {
+            transform.position = new Vector3(0, 0, -10);
             return;
         }
-        
-        if (!MicrophoneManager.pressing && !RandomEventManager.isInCatButtEvent && !RandomEventManager.isInCatStickEvent && !DragNDrop.isDragging)
+
+        if (MicrophoneManager != null && MicrophoneManager.pressing) return;
+        if (RandomEventManager != null && RandomEventManager.isInCatStickEvent) return;
+
+        if (Input.touchCount > 0)
         {
-            if (Input.touchCount == 1)
+            Touch touch = Input.GetTouch(0);
+            Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+
+            if (touch.phase == TouchPhase.Began)
             {
-                Touch touch = Input.GetTouch(0);
-                Vector3 currentPanPosition = GetWorldPos(touch.position);
+                Collider2D col = Physics2D.OverlapPoint(touchPos);
+                if (col != null)
+                {
+                    DragNDrop = col.GetComponent<DragNDrop>();
+                    isTouchingDraggable = DragNDrop != null;
+                }
 
-                if (touch.phase == TouchPhase.Began)
-                {
-                    lastPanPosition = currentPanPosition;
-                }
-                else if (touch.phase == TouchPhase.Moved)
-                {
-                    Vector3 diff = lastPanPosition - currentPanPosition;
-                    targetPosition += new Vector3(diff.x, 0f, 0f);
-                    lastPanPosition = currentPanPosition;
-                }
+                lastPanPosition = GetWorldPos(touch.position);
+                velocity = Vector3.zero;
             }
+            else if (touch.phase == TouchPhase.Moved && !isTouchingDraggable)
+            {
+                Vector3 currentPanPosition = GetWorldPos(touch.position);
+                Vector3 diff = lastPanPosition - currentPanPosition;
 
-            targetPosition.x = Mathf.Clamp(targetPosition.x, minX, maxX);
-            targetPosition.y = transform.position.y;
-            targetPosition.z = transform.position.z;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, panSmoothSpeed * Time.deltaTime);
+                velocity = diff * panSpeedMultiplier / Time.deltaTime;
+                lastPanPosition = currentPanPosition;
+            }
+            else if (touch.phase == TouchPhase.Ended)
+            {
+                isTouchingDraggable = false;
+            }
         }
+        else
+        {
+            velocity = Vector3.Lerp(velocity, Vector3.zero, friction * Time.deltaTime);
+        }
+
+        float newX = transform.position.x + velocity.x * Time.deltaTime;
+        newX = Mathf.Clamp(newX, minX, maxX);
+    
+        transform.position = new Vector3(newX, transform.position.y, transform.position.z);
     }
 
     private Vector3 GetWorldPos(Vector3 screenPos)

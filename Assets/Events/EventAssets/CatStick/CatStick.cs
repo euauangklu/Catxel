@@ -34,7 +34,8 @@ public class CatStick : MonoBehaviour
                         RandomEventManager.isInCatStickEvent = true;
                         Stick.SetActive(true);
                         StickIcon.SetActive(false);
-                        MainCamera.transform.position = new Vector3(transform.position.x,transform.position.y,MainCamera.transform.position.z);
+                        float clampedY = Mathf.Clamp(transform.position.y, -1f, 1f);
+                        MainCamera.transform.position = new Vector3(transform.position.x,clampedY,MainCamera.transform.position.z);
                         MainCamera.orthographicSize = 0.75f;
                         MiniGame.MiniGameButton.SetActive(true);
                         minigame = GameObject.FindGameObjectWithTag("MiniGameButton").GetComponent<MiniGame>();
@@ -50,6 +51,7 @@ public class CatStick : MonoBehaviour
             if (eventSource != null && minigame.Done)
             {
                 MainCamera.orthographicSize = 1.8f;
+                MainCamera.transform.position = new Vector3(0,0,-10);
                 eventSource.OnEventDone();
                 Playing = false;
                 minigame.Done = false;

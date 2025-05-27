@@ -58,7 +58,7 @@ public class CameraPan : MonoBehaviour
             else if (touch.phase == TouchPhase.Moved && !isTouchingDraggable)
             {
                 float screenDelta = touch.position.x - lastTouchScreenPos.x;
-                if (Mathf.Abs(screenDelta) < 5f) return;
+                if (Mathf.Abs(screenDelta) < 10f) return;
                 float percentMoved = screenDelta / Screen.width;
                 float worldRange = maxX - minX;
                 float moveDelta = -percentMoved * worldRange;
@@ -69,7 +69,6 @@ public class CameraPan : MonoBehaviour
             else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 isTouchingDraggable = false;
-                velocityX = lastDeltaX;
             }
         }
         else

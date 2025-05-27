@@ -61,14 +61,7 @@ public partial class CatPlayAction : Action
         }
         if (Vector2.Distance(Agent.Value.transform.position, Object.Value.transform.position) <= StopDistance)
         {
-            if (Agent.Value.transform.position.x < Object.Value.transform.position.x) //TurnRight
-            {
-                Agent.Value.transform.localScale = new Vector2(1, 1);
-            }
-            else if (Agent.Value.transform.position.x > Object.Value.transform.position.x) //TurnLeft
-            {
-                Agent.Value.transform.localScale = new Vector2(-1, 1);
-            }
+            Agent.Value.transform.localScale = new Vector2(-1, 1);
             Animator.SetBool(AnimatorCatPlayParam,true);
             PlayTimer -= Time.deltaTime;
         }

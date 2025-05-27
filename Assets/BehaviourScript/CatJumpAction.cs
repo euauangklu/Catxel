@@ -130,12 +130,12 @@ public partial class CatJumpAction : Action
     public void ActiveJumpAnim()
     {
         WaitAnimTime += Time.deltaTime;
-        if (WaitAnimTime > 0.35f && !DoneSit)
+        if (WaitAnimTime >= 0.6f && !DoneSit)
         {
             JumpReady = true;
             WaitAnimTime = 0;
         }
-        else if(WaitAnimTime > 0.35f && DoneSit)
+        else if(WaitAnimTime >= 0.6f && DoneSit)
         {
             DoneSitAnim = true;
             WaitAnimTime = 0;

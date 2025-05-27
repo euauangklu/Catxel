@@ -49,6 +49,7 @@ public class MicrophoneManager : MonoBehaviour
         {
             timer += Time.deltaTime;
             CommentBox.SetActive(true);
+            cat.color = Color.white;
             if (timer >= 3)
             {
                 CommentBox.SetActive(false);

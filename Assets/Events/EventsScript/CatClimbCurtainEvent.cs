@@ -7,14 +7,11 @@ public class CatClimbCurtainEvent : GameEvents
     
     private GameObject MainCat;
     
-    private GameObject ClimbPoint;
-    
     private RandomEventManager manager;
     public override void TriggerEvent(RandomEventManager mgr)
     {
         MainCat = GameObject.FindWithTag("MainCat");
-        GameObject ClimbPoint = GameObject.FindWithTag("ClimbPoint");
-        GameObject obj = Instantiate(_gameObject,ClimbPoint.transform.position, Quaternion.identity);
+        GameObject obj = Instantiate(_gameObject,MainCat.transform.position, Quaternion.identity);
         CatClimbCurtain cat = obj.GetComponent<CatClimbCurtain>();
         MainCat.SetActive(false);
         if (cat != null)

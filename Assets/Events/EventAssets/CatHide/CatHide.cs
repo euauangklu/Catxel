@@ -10,16 +10,39 @@ public class CatHide : MonoBehaviour
     private bool WalkOut;
     private float Timer;
     private Animator Animator;
+    private bool ReadyEvent;
+    private GameObject HidePoint;
     public CatHideEvent eventSource;
     
     void Start()
     {
         Animator = _gameObject.GetComponent<Animator>();
+        HidePoint = GameObject.FindWithTag("HidePoint");
     }
     void Update()
     {
         var MainCat = MainCatManager.MainCat;
-        if (!WalkOut)
+        if (Vector2.Distance(transform.position, HidePoint.transform.position) >= 0.1f && !ReadyEvent)
+        {
+            if (transform.position.x < HidePoint.transform.position.x)
+            {
+                transform.localScale= new Vector2(1, 1);
+            }
+            else if (transform.position.x > HidePoint.transform.position.x)
+            {
+                transform.localScale= new Vector2(-1, 1);
+            }
+            transform.position = Vector2.MoveTowards(transform.position, HidePoint.transform.position, WalkSpeed * 0.48f * Time.deltaTime);
+            Animator.SetBool("Walk",true);
+        }
+
+        if (Vector2.Distance(transform.position, HidePoint.transform.position) < 0.1f && !ReadyEvent)
+        {
+            Animator.SetBool("Walk",false);
+            ReadyEvent = true;
+        }
+
+        if (!WalkOut && ReadyEvent)
         {
             if (Input.touchCount > 0)
             {
@@ -65,6 +88,7 @@ public class CatHide : MonoBehaviour
                 Destroy(this.gameObject);
                 Siting = false;
                 WalkOut = false;
+                ReadyEvent = false;
             }
         }
     }

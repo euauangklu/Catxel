@@ -9,8 +9,6 @@ public class CatScrapeEvent : GameEvents
     
     private GameObject MainCat;
     
-    private GameObject ScrapePoint;
-    
     private RandomEventManager manager;
     
     public override void TriggerEvent(RandomEventManager mgr)
@@ -25,8 +23,7 @@ public class CatScrapeEvent : GameEvents
         else if (BuyItemManager.Instance.IsItemBought(requiredItemID))
         {
             MainCat = GameObject.FindWithTag("MainCat");
-            GameObject ScrapePoint = GameObject.FindWithTag("ScrapePoint");
-            GameObject obj = Instantiate(_gameObject,ScrapePoint.transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(_gameObject,MainCat.transform.position, Quaternion.identity);
             CatScrape cat = obj.GetComponent<CatScrape>();
             MainCat.SetActive(false);
             if (cat != null)

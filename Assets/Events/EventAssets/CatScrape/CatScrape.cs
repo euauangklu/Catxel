@@ -10,6 +10,8 @@ public class CatScrape : MonoBehaviour
     private Animator Animator;
     private bool AlreadyDrag;
     private bool AlreadyDrop;
+    private bool ReadyEvent;
+    private GameObject ScrapePoint;
     public CatScrapeEvent eventSource;
     private float Timer;
     
@@ -17,46 +19,71 @@ public class CatScrape : MonoBehaviour
     void Start()
     {
         Animator = _gameObject.GetComponent<Animator>();
+        ScrapePoint = GameObject.FindWithTag("ScrapePoint");
     }
 
     void Update()
     {
         var MainCat = MainCatManager.MainCat;
-        if (!AlreadyDrop)
+        if (Vector2.Distance(transform.position, ScrapePoint.transform.position) >= 0.1f && !ReadyEvent)
         {
-            if (DragNDrop.isDragging)
+            if (transform.position.x < ScrapePoint.transform.position.x)
             {
-                Animator.SetBool("IsDragging",true);
-                AlreadyDrag = true;
+                transform.localScale= new Vector2(1, 1);
             }
-            else if (!DragNDrop.isDragging)
+            else if (transform.position.x > ScrapePoint.transform.position.x)
             {
-                Animator.SetBool("IsDragging",false);
-                if (AlreadyDrag)
+                transform.localScale= new Vector2(-1, 1);
+            }
+            transform.position = Vector2.MoveTowards(transform.position, ScrapePoint.transform.position,  0.48f * Time.deltaTime);
+        }
+
+        if (Vector2.Distance(transform.position, ScrapePoint.transform.position) < 0.1f && !ReadyEvent)
+        {
+            Animator.SetBool("Scrape",true);
+            transform.localScale= new Vector2(1, 1);
+            ReadyEvent = true;
+        }
+
+        if (ReadyEvent)
+        {
+            if (!AlreadyDrop)
+            {
+                if (DragNDrop.isDragging)
                 {
-                    AlreadyDrop = true;
+                    Animator.SetBool("IsDragging",true);
+                    AlreadyDrag = true;
+                }
+                else if (!DragNDrop.isDragging)
+                {
+                    Animator.SetBool("IsDragging",false);
+                    if (AlreadyDrag)
+                    {
+                        AlreadyDrop = true;
+                        Animator.SetBool("Scrape",false);
+                    }
                 }
             }
-        }
-        if (_gameObject.transform.position.y >= FloorPos.y && AlreadyDrop)
-        {
-            _gameObject.transform.position -= new Vector3(0, fallSpeed * Time.deltaTime,0);
-        }
-        else if (_gameObject.transform.position.y < FloorPos.y && AlreadyDrop)
-        {
-            Animator.SetBool("Idle",true);
-            if (Timer <= SetTime)
+            if (_gameObject.transform.position.y >= FloorPos.y && AlreadyDrop)
             {
-                Timer += Time.deltaTime;
+                _gameObject.transform.position -= new Vector3(0, fallSpeed * Time.deltaTime,0);
             }
-            else if (Timer > SetTime)
+            else if (_gameObject.transform.position.y < FloorPos.y && AlreadyDrop)
             {
-                AlreadyDrop = false;
-                AlreadyDrag = false;
-                MainCat.transform.position = this.transform.position;
-                eventSource.OnEventDone();
-                Destroy(this.gameObject);
-            }
+                Animator.SetBool("Idle",true);
+                if (Timer <= SetTime)
+                {
+                    Timer += Time.deltaTime;
+                }
+                else if (Timer > SetTime)
+                {
+                    AlreadyDrop = false;
+                    AlreadyDrag = false;
+                    MainCat.transform.position = this.transform.position;
+                    eventSource.OnEventDone();
+                    Destroy(this.gameObject);
+                }
+            } 
         }
     }
 }

@@ -9,8 +9,6 @@ public class CatHideEvent : GameEvents
     
     private GameObject MainCat;
     
-    private GameObject HidePoint;
-    
     private RandomEventManager manager;
     
     public override void TriggerEvent(RandomEventManager mgr)
@@ -24,8 +22,7 @@ public class CatHideEvent : GameEvents
         else if (BuyItemManager.Instance.IsItemBought(requiredItemID))
         {
             MainCat = GameObject.FindWithTag("MainCat");
-            GameObject HidePoint = GameObject.FindWithTag("HidePoint");
-            GameObject obj = Instantiate(_gameObject, HidePoint.transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(_gameObject, MainCat.transform.position, Quaternion.identity);
             CatHide cat = obj.GetComponent<CatHide>();
             MainCat.SetActive(false);
             if (cat != null)

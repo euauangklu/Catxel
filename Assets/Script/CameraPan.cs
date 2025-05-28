@@ -6,7 +6,7 @@ public class CameraPan : MonoBehaviour
     [SerializeField] private float minX = -1f;
     [SerializeField] private float maxX = 1f;
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float friction = 5f; // ยิ่งมาก ยิ่งหยุดเร็ว
+    [SerializeField] private float friction = 5f; 
 
     [Header("Manager")]
     [SerializeField] private RandomEventManager RandomEventManager;
@@ -19,7 +19,6 @@ public class CameraPan : MonoBehaviour
     private bool isTouchingDraggable = false;
 
     private Vector2 lastTouchScreenPos;
-    private float lastDeltaX = 0f;
 
     void Start()
     {
@@ -63,7 +62,6 @@ public class CameraPan : MonoBehaviour
                 float worldRange = maxX - minX;
                 float moveDelta = -percentMoved * worldRange;
                 targetX = Mathf.Clamp(transform.position.x + moveDelta, minX, maxX);
-                lastDeltaX = moveDelta / Time.deltaTime;
                 lastTouchScreenPos = touch.position;
             }
             else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)

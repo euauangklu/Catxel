@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CatScrape : MonoBehaviour
@@ -14,6 +15,7 @@ public class CatScrape : MonoBehaviour
     private GameObject ScrapePoint;
     public CatScrapeEvent eventSource;
     private float Timer;
+    private bool WaitForScale;
     
 
     void Start()
@@ -41,7 +43,6 @@ public class CatScrape : MonoBehaviour
         if (Vector2.Distance(transform.position, ScrapePoint.transform.position) < 0.1f && !ReadyEvent)
         {
             Animator.SetBool("Scrape",true);
-            transform.localScale= new Vector2(1, 1);
             ReadyEvent = true;
         }
 
@@ -49,6 +50,16 @@ public class CatScrape : MonoBehaviour
         {
             if (!AlreadyDrop)
             {
+                if (Timer <= 0.15f && !WaitForScale)
+                {
+                    Timer += Time.deltaTime;
+                }
+                if (Timer > 0.15f)
+                {
+                    transform.localScale= new Vector2(1, 1);
+                    WaitForScale = true;
+                    Timer = 0;
+                }
                 if (DragNDrop.isDragging)
                 {
                     Animator.SetBool("IsDragging",true);
@@ -56,10 +67,10 @@ public class CatScrape : MonoBehaviour
                 }
                 else if (!DragNDrop.isDragging)
                 {
-                    Animator.SetBool("IsDragging",false);
                     if (AlreadyDrag)
                     {
                         AlreadyDrop = true;
+                        Animator.SetBool("IsDragging",false);
                         Animator.SetBool("Scrape",false);
                     }
                 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Cat Scrape Event
   m_EditorClassIdentifier: 
   _gameObject: {fileID: 186558091959930709, guid: 4e8a58fd25978bb42a4cca0014121be2, type: 3}
-  requiredItemID: Sofa01
+  requiredItemID: Pillar01

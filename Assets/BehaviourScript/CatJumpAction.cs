@@ -125,6 +125,7 @@ public partial class CatJumpAction : Action
         JumpReady = false;
         DoneSit = false;
         DoneSitAnim = false;
+        WaitAnimTime = 0;
     }
 
     public void ActiveJumpAnim()

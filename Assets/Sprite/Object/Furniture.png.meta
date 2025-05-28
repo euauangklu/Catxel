@@ -1,31 +1,55 @@
 fileFormatVersion: 2
-guid: a11f6e138e545f64aaeefeb2fca7dbf4
+guid: 30a83c8a5b1730a48bec64ce3f9ea466
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4260179760309858436
-    second: Furniture 1_0
+      213: 5852135935505538600
+    second: Furniture_0
   - first:
-      213: -4677439328281482337
-    second: Furniture 1_1
+      213: 6580706180292963874
+    second: Furniture_1
   - first:
-      213: -8782868945968298683
-    second: Furniture 1_2
+      213: 711061946136450388
+    second: Furniture_2
   - first:
-      213: -2849664208621109296
-    second: Furniture 1_3
+      213: -5205570905279116615
+    second: Furniture_3
   - first:
-      213: -9179855004428792202
-    second: Furniture 1_4
+      213: -3062193336436783412
+    second: Furniture_4
   - first:
-      213: 3811826136317573328
-    second: Furniture 1_5
+      213: -5819481625698966781
+    second: Furniture_5
   - first:
-      213: 1535856821541288200
-    second: Furniture 1_6
+      213: -3665240723269962499
+    second: Furniture_6
   - first:
-      213: 6123948246743042702
-    second: Furniture 1_7
+      213: -1818099164645460120
+    second: Furniture_7
+  - first:
+      213: -2233355497130287607
+    second: Furniture_8
+  - first:
+      213: 691292305700305925
+    second: Furniture_9
+  - first:
+      213: 1702620050945347869
+    second: Furniture_10
+  - first:
+      213: 8416179097877672357
+    second: Furniture_11
+  - first:
+      213: 5717070287584035636
+    second: Furniture_12
+  - first:
+      213: -7931311537267349517
+    second: Furniture_13
+  - first:
+      213: 4211373640144025041
+    second: Furniture_14
+  - first:
+      213: 487064586880143811
+    second: Furniture_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,7 +158,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Furniture 1_0
+      name: Furniture_0
       rect:
         serializedVersion: 2
         x: 13
@@ -149,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 480f39cabe23f1b30800000000000000
-      internalID: 4260179760309858436
+      spriteID: 82e1b1d90a6f63150800000000000000
+      internalID: 5852135935505538600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture 1_1
+      name: Furniture_1
       rect:
         serializedVersion: 2
         x: 64
@@ -171,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9b275b86b5661fb0800000000000000
-      internalID: -4677439328281482337
+      spriteID: 22e6497a76d535b50800000000000000
+      internalID: 6580706180292963874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture 1_2
+      name: Furniture_2
       rect:
         serializedVersion: 2
         x: 120
@@ -193,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54500ce2a3bfc1680800000000000000
-      internalID: -8782868945968298683
+      spriteID: 455d2c892133ed900800000000000000
+      internalID: 711061946136450388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture 1_3
+      name: Furniture_3
       rect:
         serializedVersion: 2
-        x: 211
-        y: 279
-        width: 114
-        height: 96
+        x: 175
+        y: 383
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0df7efb1085f378d0800000000000000
-      internalID: -2849664208621109296
+      spriteID: 9bacab987d812c7b0800000000000000
+      internalID: -5205570905279116615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture 1_4
+      name: Furniture_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 259
-        width: 41
-        height: 50
+        x: 199
+        y: 383
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,14 +261,102 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67e0e6ba28a9a9080800000000000000
-      internalID: -9179855004428792202
+      spriteID: cc60e1c7267e085d0800000000000000
+      internalID: -3062193336436783412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture 1_5
+      name: Furniture_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 383
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303ec4b5b4c0d3fa0800000000000000
+      internalID: -5819481625698966781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_6
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 383
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4b2314bf2722dc0800000000000000
+      internalID: -3665240723269962499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_7
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 383
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8677fd44170d4c6e0800000000000000
+      internalID: -1818099164645460120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_8
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 380
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e126812078101e0800000000000000
+      internalID: -2233355497130287607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_9
       rect:
         serializedVersion: 2
         x: 47
@@ -259,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d832c0dca356e430800000000000000
-      internalID: 3811826136317573328
+      spriteID: 50c3a3d70b6f79900800000000000000
+      internalID: 691292305700305925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture 1_6
+      name: Furniture_10
       rect:
         serializedVersion: 2
         x: 120
@@ -274,21 +386,87 @@ TextureImporter:
         width: 59
         height: 81
       alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+      pivot: {x: 0.5, y: 0.61}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80934d154a5705510800000000000000
-      internalID: 1535856821541288200
+      spriteID: d111e0c5aebe0a710800000000000000
+      internalID: 1702620050945347869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture 1_7
+      name: Furniture_11
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 278
+        width: 114
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1f0177c464cc470800000000000000
+      internalID: 8416179097877672357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_12
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 338
+        width: 30
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433036fd22d175f40800000000000000
+      internalID: 5717070287584035636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 259
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7e832cd225ee190800000000000000
+      internalID: -7931311537267349517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_14
       rect:
         serializedVersion: 2
         x: 26
@@ -303,8 +481,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8acefdfb72acf450800000000000000
-      internalID: 6123948246743042702
+      spriteID: 1d57a3d430ec17a30800000000000000
+      internalID: 4211373640144025041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_15
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 183
+        width: 24
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1d9a349a662c600800000000000000
+      internalID: 487064586880143811
       vertices: []
       indices: 
       edges: []
@@ -313,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2c1bac7ce76af7649bfc59c112e9eed8
+    spriteID: 62ba08db357362e4b99f6bbccef248ae
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +523,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Furniture 1_0: 4260179760309858436
-      Furniture 1_1: -4677439328281482337
-      Furniture 1_2: -8782868945968298683
-      Furniture 1_3: -2849664208621109296
-      Furniture 1_4: -9179855004428792202
-      Furniture 1_5: 3811826136317573328
-      Furniture 1_6: 1535856821541288200
-      Furniture 1_7: 6123948246743042702
+      Furniture_0: 5852135935505538600
+      Furniture_1: 6580706180292963874
+      Furniture_10: 1702620050945347869
+      Furniture_11: 8416179097877672357
+      Furniture_12: 5717070287584035636
+      Furniture_13: -7931311537267349517
+      Furniture_14: 4211373640144025041
+      Furniture_15: 487064586880143811
+      Furniture_2: 711061946136450388
+      Furniture_3: -5205570905279116615
+      Furniture_4: -3062193336436783412
+      Furniture_5: -5819481625698966781
+      Furniture_6: -3665240723269962499
+      Furniture_7: -1818099164645460120
+      Furniture_8: -2233355497130287607
+      Furniture_9: 691292305700305925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

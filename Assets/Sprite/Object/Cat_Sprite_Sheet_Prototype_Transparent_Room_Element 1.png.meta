@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 24325e2a63c86ea4ab51dc90070f8430
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7472070817653439324
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_0
+  - first:
+      213: 5128120965355338500
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_1
+  - first:
+      213: 9184591426742661618
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_2
+  - first:
+      213: 4650576237404995497
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_3
+  - first:
+      213: -784392439595280128
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_4
+  - first:
+      213: 4329002578250870659
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_5
+  - first:
+      213: -6922906319825297530
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_6
+  - first:
+      213: -6303111105516004096
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_7
+  - first:
+      213: 71821331830455717
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_8
+  - first:
+      213: -1595449731674826959
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_9
+  - first:
+      213: 6133935190584901076
+    second: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 431
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bbbc6e1d022b760800000000000000
+      internalID: 7472070817653439324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_1
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 432
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bfc3919deba2740800000000000000
+      internalID: 5128120965355338500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 431
+        width: 56
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f138169d39367f70800000000000000
+      internalID: 9184591426742661618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 460
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9afb567b27a2a8040800000000000000
+      internalID: 4650576237404995497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 431
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009db696b374d15f0800000000000000
+      internalID: -784392439595280128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_5
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 437
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38fa46ca8e4b31c30800000000000000
+      internalID: 4329002578250870659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_6
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 412
+        width: 39
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f91899165ecef90800000000000000
+      internalID: -6922906319825297530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 359
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d16e748d9d688a0800000000000000
+      internalID: -6303111105516004096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_8
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 359
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5adbc0bee192ff000800000000000000
+      internalID: 71821331830455717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_9
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 359
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137978e0ce2dbd9e0800000000000000
+      internalID: -1595449731674826959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_10
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 359
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ddb41e8e8d102550800000000000000
+      internalID: 6133935190584901076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_0: 7472070817653439324
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_1: 5128120965355338500
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_10: 6133935190584901076
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_2: 9184591426742661618
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_3: 4650576237404995497
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_4: -784392439595280128
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_5: 4329002578250870659
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_6: -6922906319825297530
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_7: -6303111105516004096
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_8: 71821331830455717
+      Cat_Sprite_Sheet_Prototype_Transparent_Room_Element 1_9: -1595449731674826959
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

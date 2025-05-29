@@ -115,7 +115,7 @@ MonoBehaviour:
   - rid: 7020319550385160522
   - rid: 7020319550385160927
   - rid: 7020319562650878157
-  - rid: 7020319562650878185
+  - rid: 376079816419180836
   - rid: 7020319573144240371
   - rid: 7020319573144240372
   - rid: 7020319573144240635
@@ -151,6 +151,16 @@ MonoBehaviour:
           m_Value1: 13636118659622914745
         Name: RandomEventManager
         m_Value: {fileID: 0}
+    - rid: 376079816419180836
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 9731704528781081745
+          m_Value1: 13501274027845750244
+        Name: CatPlayList
+        m_Value:
+        - {fileID: 0}
+        - {fileID: 0}
     - rid: 7020319550385160410
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -207,14 +217,6 @@ MonoBehaviour:
           m_Value1: 2530104177919303424
         Name: PlayTime
         m_Value: 5
-    - rid: 7020319562650878185
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 5176993383842852397
-          m_Value1: 12778695698612589404
-        Name: PlayGameobject
-        m_Value: {fileID: 0}
     - rid: 7020319573144240371
       type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -347,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  EnableDrag: 0
 --- !u!114 &6281052850101355322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +366,7 @@ MonoBehaviour:
   FloorPos: {x: 0, y: 0, z: 0}
   fallSpeed: 1
   CatEXP: 0
-  EXPPerEvent: 10
+  EXPPerEvent: 5
 --- !u!1 &7687905430761779331
 GameObject:
   m_ObjectHideFlags: 0

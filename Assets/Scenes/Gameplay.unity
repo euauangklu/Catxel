@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 20324170}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.76, y: -0.41, z: 0}
+  m_LocalPosition: {x: -1.76, y: -0.45999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -378,6 +378,8 @@ GameObject:
   m_Component:
   - component: {fileID: 129550784}
   - component: {fileID: 129550785}
+  - component: {fileID: 129550787}
+  - component: {fileID: 129550786}
   m_Layer: 0
   m_Name: CatBall
   m_TagString: Untagged
@@ -455,6 +457,124 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &129550786
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129550783}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.05
+--- !u!114 &129550787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129550783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01623fed3f13dc347b43eaeb8bcc706c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CatPlayAction:
+    ID:
+      m_Value0: 0
+      m_Value1: 0
+    Graph:
+      rid: -2
+    m_Parent:
+      rid: -2
+    Agent:
+      rid: -2
+    ObjectList:
+      rid: -2
+    WalkSpeed:
+      rid: -2
+    PlayTime:
+      rid: 376079816419180992
+    AnimatorCatPlayParam:
+      rid: 376079816419180993
+    AnimatorSpeedParam:
+      rid: 376079816419180994
+    AnimatorPlayParam:
+      rid: 376079816419180995
+    StopDistance:
+      rid: 376079816419180996
+    Playing: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 376079816419180992
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
+    - rid: 376079816419180993
+      type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: CatPlay
+    - rid: 376079816419180994
+      type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: SpeedMagnitude
+    - rid: 376079816419180995
+      type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: PlayMagnitude
+    - rid: 376079816419180996
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
 --- !u!1 &137943541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,8 +2085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ValueNum: 1
-  targetValue: 20
-  stepValue: 20
+  targetValue: 10
+  stepValue: 10
   incrementDelay: 0.01
   DeactiveList:
   - {fileID: 1693541260}
@@ -2858,7 +2978,7 @@ Transform:
   m_GameObject: {fileID: 507656174}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.74, y: -0.79999995, z: 0}
+  m_LocalPosition: {x: 0.74, y: -0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3829,7 +3949,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 46254715}
-  - {fileID: 886666767}
+  - {fileID: 1893320376}
   - {fileID: 269744049}
   - {fileID: 225690498}
   m_Father: {fileID: 1891691576}
@@ -4195,7 +4315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 886666767}
   m_Layer: 0
-  m_Name: PlayGameObject
+  m_Name: CatPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4210,11 +4330,11 @@ Transform:
   m_GameObject: {fileID: 886666766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.47, y: -0.24000001, z: 0}
+  m_LocalPosition: {x: -0.56, y: -0.24000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 708632544}
+  m_Father: {fileID: 1893320376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933510851
 GameObject:
@@ -4633,11 +4753,11 @@ MonoBehaviour:
   EventRandom: 0
   gameEvents:
   - {fileID: 11400000, guid: f36bf90bf7e632b479749095244cfd90, type: 2}
-  - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
   - {fileID: 11400000, guid: 5c25ad05299aed44d8fd9ad64d89581e, type: 2}
-  - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
+  - {fileID: 11400000, guid: dd251b19efc44694eb8574baa39eb809, type: 2}
   - {fileID: 11400000, guid: 2303b4e80ba1ca547aebdf00b176895d, type: 2}
   - {fileID: 11400000, guid: 62274cd1d734fc04a8b304fc6d31bc14, type: 2}
+  - {fileID: 11400000, guid: cef2764cacedfaa4bb98964d4aacebfa, type: 2}
   - {fileID: 11400000, guid: f2cac8e455cce584b9cecd03e2aad828, type: 2}
   EventTimer: 50
   DoneEvent: 0
@@ -5094,69 +5214,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117760933}
   m_CullTransparentMesh: 1
---- !u!1 &1125671411
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1125671413}
-  - component: {fileID: 1125671412}
-  - component: {fileID: 1125671414}
-  m_Layer: 0
-  m_Name: PathfindingSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1125671412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125671411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1490005ef7b10f04cabe292bf4edeb91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unwalkableMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gridWorldSize: {x: 48, y: 48}
-  nodeRadius: 0.05
---- !u!4 &1125671413
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125671411}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24175324, y: 0.08760956, z: -0.013207434}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1125671414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125671411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26cff1035a3c9974594d189d81c187c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 1125671412}
 --- !u!1 &1130685703
 GameObject:
   m_ObjectHideFlags: 0
@@ -5322,6 +5379,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1189481781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189481782}
+  m_Layer: 0
+  m_Name: CatPlay (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1189481782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189481781}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.030000001, y: -0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1893320376}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193248321
 GameObject:
   m_ObjectHideFlags: 0
@@ -7236,7 +7324,7 @@ Transform:
   m_GameObject: {fileID: 1688060301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.48999998, y: 1.11, z: 0}
+  m_LocalPosition: {x: -0.42, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8686,6 +8774,39 @@ Transform:
   - {fileID: 726686790}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1893320375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893320376}
+  m_Layer: 0
+  m_Name: AllPlayObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1893320376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893320375}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 886666767}
+  - {fileID: 1189481782}
+  m_Father: {fileID: 708632544}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1898292415
 GameObject:
   m_ObjectHideFlags: 0
@@ -9200,10 +9321,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1348179353}
     - target: {fileID: 9093100329530773133, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
-      propertyPath: managedReferences[7020319562650878185].m_Value
-      value: 
-      objectReference: {fileID: 886666766}
-    - target: {fileID: 9093100329530773133, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
       propertyPath: managedReferences[7020319573144240371].m_Value
       value: 
       objectReference: {fileID: 1972838828}
@@ -9215,6 +9332,14 @@ PrefabInstance:
       propertyPath: managedReferences[7020319573144240635].m_Value
       value: 
       objectReference: {fileID: 1237312063}
+    - target: {fileID: 9093100329530773133, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
+      propertyPath: 'managedReferences[376079816419180836].m_Value.Array.data[0]'
+      value: 
+      objectReference: {fileID: 886666766}
+    - target: {fileID: 9093100329530773133, guid: 6285eb0a1522e2e468a1d8725b1b9aae, type: 3}
+      propertyPath: 'managedReferences[376079816419180836].m_Value.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1189481781}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9234,4 +9359,3 @@ SceneRoots:
   - {fileID: 25138202}
   - {fileID: 640974761}
   - {fileID: 759690690}
-  - {fileID: 1125671413}

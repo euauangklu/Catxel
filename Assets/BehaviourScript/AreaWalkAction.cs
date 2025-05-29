@@ -38,10 +38,6 @@ public partial class AreaWalkAction : Action
 
     private bool RandomRunOrWalk;
     
-    private List<Node> path;
-    
-    private int pathIndex;
-    
 
     protected override Status OnStart()
     {
@@ -71,12 +67,6 @@ public partial class AreaWalkAction : Action
             return Status.Running;
         }
         
-        // Rigidbody2D rb = Agent.Value.GetComponent<Rigidbody2D>();
-        // if (rb != null)
-        // {
-        //     Vector2 nextPosition = Vector2.MoveTowards(rb.position, targetPosition, WalkSpeed * 0.48f * Time.deltaTime);
-        //     rb.MovePosition(nextPosition);
-        // }
         if (hit.collider == null)
         {
             Agent.Value.transform.position = Vector2.MoveTowards(Agent.Value.transform.position, targetPosition, WalkSpeed * 0.48f * Time.deltaTime);

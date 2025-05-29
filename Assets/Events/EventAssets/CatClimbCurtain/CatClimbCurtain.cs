@@ -42,7 +42,7 @@ public class CatClimbCurtain : MonoBehaviour
             }
             if (Mathf.Abs(_gameObject.transform.position.x - ClimbPoint.transform.position.x) <= 0.1f)
             {
-                Animator.SetBool("Jump",true);
+                Animator.SetBool("Climb", true);
                 Timer += Time.deltaTime;
                 if (Timer >= 0.6f)
                 {
@@ -52,14 +52,13 @@ public class CatClimbCurtain : MonoBehaviour
         
             if (Vector2.Distance(_gameObject.transform.position, ClimbPoint.transform.position) < 0.1f)
             {
-                Animator.SetBool("Jump",false);
-                Animator.SetBool("Climb", true);
                 ReadyEvent = true;
                 Timer = 0;
             }
         }
         if (ReadyEvent)
         {
+            DragNDrop.EnableDrag = true;
             if (!AlreadyDrop)
             {
                 if (DragNDrop.isDragging)
@@ -74,6 +73,7 @@ public class CatClimbCurtain : MonoBehaviour
                     {
                         Animator.SetBool("Climb", false);
                         AlreadyDrop = true;
+                        DragNDrop.EnableDrag = false;
                     }
                 }
             }

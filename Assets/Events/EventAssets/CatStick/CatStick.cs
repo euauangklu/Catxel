@@ -34,9 +34,9 @@ public class CatStick : MonoBehaviour
                         RandomEventManager.isInCatStickEvent = true;
                         Stick.SetActive(true);
                         StickIcon.SetActive(false);
-                        float clampedY = Mathf.Clamp(transform.position.y, -1f, 1f);
+                        float clampedY = Mathf.Clamp(transform.position.y, -1f, 2f);
                         MainCamera.transform.position = new Vector3(transform.position.x,clampedY,MainCamera.transform.position.z);
-                        MainCamera.orthographicSize = 0.75f;
+                        MainCamera.orthographicSize = 1f;
                         MiniGame.MiniGameButton.SetActive(true);
                         minigame = GameObject.FindGameObjectWithTag("MiniGameButton").GetComponent<MiniGame>();
                         Playing = true;

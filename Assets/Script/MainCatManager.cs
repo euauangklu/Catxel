@@ -12,6 +12,7 @@ public class MainCatManager : MonoBehaviour
     public int CatEXP;
     public int EXPPerEvent = 10;
     private SpriteRenderer cat;
+    private float Timer;
 
     void Awake()
     {
@@ -22,6 +23,8 @@ public class MainCatManager : MonoBehaviour
         {
             CatEXP = PlayerPrefs.GetInt("CatEXP");
         }
+        _dragNDrop.EnableDrag = true;
+        
     }
 
     void Update()
@@ -34,9 +37,18 @@ public class MainCatManager : MonoBehaviour
         if (_dragNDrop.isDragging && !AlreadyDrag)
         {
             Animator.SetBool("Hold", true);
+            Animator.SetBool("AlreadyHold", true);
             AlreadyDrag = true;
         }
-
+        if (AlreadyDrag)
+        {
+            Timer += Time.deltaTime;
+        }
+        if (AlreadyDrag && Timer > 0.1f)
+        {
+            Animator.SetBool("AlreadyHold", false);
+        }
+        
         if (!_dragNDrop.isDragging && AlreadyDrag)
         {
             Animator.SetBool("Hold", false);
@@ -49,6 +61,7 @@ public class MainCatManager : MonoBehaviour
             {
                 Animator.SetBool("Drop", false);
                 AlreadyDrag = false;
+                Timer = 0;
             }
         }
         

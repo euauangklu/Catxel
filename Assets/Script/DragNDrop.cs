@@ -3,11 +3,12 @@ using UnityEngine;
 public class DragNDrop : MonoBehaviour
 {
     public bool isDragging = false;
+    public bool EnableDrag;
     private Vector3 offset;
 
     void Update()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && EnableDrag)
         {
             Touch touch = Input.GetTouch(0);
             Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);

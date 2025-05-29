@@ -48,6 +48,7 @@ public class CatScrape : MonoBehaviour
 
         if (ReadyEvent)
         {
+            DragNDrop.EnableDrag = true;
             if (!AlreadyDrop)
             {
                 if (Timer <= 0.15f && !WaitForScale)
@@ -72,6 +73,7 @@ public class CatScrape : MonoBehaviour
                         AlreadyDrop = true;
                         Animator.SetBool("IsDragging",false);
                         Animator.SetBool("Scrape",false);
+                        DragNDrop.EnableDrag = false;
                     }
                 }
             }

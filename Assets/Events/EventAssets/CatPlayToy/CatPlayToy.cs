@@ -11,9 +11,11 @@ public class CatPlayToy : MonoBehaviour
     private bool StartEvent;
     public CatPlayToyEvent eventSource;
     private Animator Animator;
+    private SpriteRenderer SpriteRenderer;
     void Start()
     {
         Animator = gameObject.GetComponent<Animator>();
+        SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -45,6 +47,7 @@ public class CatPlayToy : MonoBehaviour
             }
             else if (CatToy.gameObject.transform.localPosition.y <= 0.1f)
             {
+                SpriteRenderer.flipX = true;
                 Animator.SetBool("Playing",true);
                 timer += Time.deltaTime;
                 if (PlayTimer < timer)
